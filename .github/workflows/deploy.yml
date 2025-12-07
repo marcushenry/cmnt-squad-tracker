@@ -1,0 +1,36 @@
+name: Deploy CMNT Squad Tracker
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
+        run: npm run build:static
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::260727659905:role/GitHubS3DeployRole
+          aws-region: us-east-1
+
+      - name: Sync files to S3
+        run: aws s3 sync out/ s3://cmnt-squad-tracker-goose --delete
