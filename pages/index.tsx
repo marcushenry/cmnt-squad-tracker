@@ -5,16 +5,18 @@ import playersData from "../data/players.json";
 type Player = {
   id?: string | number;
   name: string;
-  position: string;         // "GK" | "DF" | "MF" | "FW"
+  position: string;         
   jerseyNumber?: number;
-  rosterCategory?: string;  // e.g. "Senior", "Supplemental Slots 25-28"
-  playerCategory?: string;  // e.g. "International, U22 Initiative"
-  status?: string;          // "lock", "bubble", etc.
+  age?: number;  
+  clubTeam?: string;  
+  injured?: string;
+  status?: string;        
   lock?: boolean;
-  imageUrl?: string;        // optional headshot URL
+  imageUrl?: string;        
 };
 
-const allPlayers = playersData as Player[];
+const allPlayers: Player[] = playersData as unknown as Player[];
+
 
 // helper to sort by position order then jersey #
 const POSITION_ORDER: Record<string, number> = {
@@ -138,7 +140,7 @@ const HomePage = () => {
                     <td>{p.jerseyNumber ?? "—"}</td>
                     <td>{positionLabel(p.position)}</td>
                     <td>{p.age ?? "—"}</td>
-                    <td>{p.clubteam ?? "—"}</td>
+                    <td>{p.clubTeam ?? "—"}</td>
                     <td>
                       <div className="status-pill-container">
                         {p.status === "lock" && (

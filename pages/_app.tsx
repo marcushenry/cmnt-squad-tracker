@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className="app">
       <header className="nav">
         <div className="nav-left">
-          
+           
         </div>
  
       </header>
