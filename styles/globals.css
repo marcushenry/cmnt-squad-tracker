@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+
+@keyframes watermarkPulse {
+  0%   { opacity: 0.04; }
+  50%  { opacity: 0.075; }
+  100% { opacity: 0.04; }
+}
+
 
 
 :root {
@@ -55,54 +63,90 @@ body {
 
 /* Top row */
 
+/* Top row / site brand */
+
 .top-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 16px;
   margin-bottom: 20px;
   color: var(--text-muted);
   font-size: 0.8rem;
+  flex-wrap: wrap;
 }
 
+/* Logo + wordmark container */
 .brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 1.5rem;      
-  color: var(--accent-deep);
+  gap: 17px;
+  padding: 4px 0;
 }
 
+/* Bigger WC26 badge */
 .brand-pill {
   width: 100px;
   height: 100px;
-  border-radius: 6px;
-  overflow: hidden;
+  border-radius: 13px;
 
-  /* white frame around the logo */
   background-color: #ffffff;
-
-  /* WC26 logo */
   background-image: url("/images/wc26-logo.png");
   background-size: cover;
   background-position: center;
 
-  /* subtle glow to keep that “badge” feel */
-  box-shadow: 0 0 8px rgba(200, 16, 46, 0.25);
+  box-shadow: 0 0 10px rgba(200, 16, 46, 0.28);
   border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+/* Wordmark container */
+.brand-main {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  margin-top: 2px;
+  text-transform: uppercase;
+  font-family: "Montserrat", var(--font-sans);
+}
 
-.updated {
+/* Top line — CANADA (large & powerful) */
+.brand-canada {
+  font-weight: 950;
+  font-size: 2.2rem;     
+  letter-spacing: 0.14em;
+  color: #c8102e;
+  margin-bottom: 2px;
+}
+
+
+.brand-sub {
+  font-weight: 800;
+  font-size: 1rem;     
+  letter-spacing: 0.22em;
+  color: #111827;         
   opacity: 0.9;
 }
+
+.brand-sub-tracker {
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  opacity: 0.85;
+}
+
+/* Align “Last updated” nicely */
+.updated {
+  opacity: 0.85;
+  align-self: flex-start;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
 
 /* Hero */
 
 .hero {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(135deg, #c8102e 0%, #8b0016 40%, #3b0b1a 100%);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -111,6 +155,22 @@ body {
   margin-bottom: 28px;
   color: #ffffff;
 }
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/images/canada-soccer.svg");
+  background-repeat: no-repeat;
+  background-size: 20%;              /* tweak 30–60% as you like */
+  background-position: right 10px bottom -22px;
+  opacity: 0.05;                    
+  animation: watermarkPulse 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
 
 @media (min-width: 768px) {
   .hero {
@@ -276,7 +336,8 @@ body {
 }
 
 .locks-table tbody tr:hover {
-  background: rgba(200, 16, 46, 0.03);
+  background: rgba(200, 16, 46, 0.06);
+  cursor: pointer;
 }
 
 /* Player cell */
@@ -292,10 +353,11 @@ body {
 }
 
 .player-avatar {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   border-radius: 999px;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #fff;
   flex-shrink: 0;
   border: 1px solid #e5e7eb;
 }

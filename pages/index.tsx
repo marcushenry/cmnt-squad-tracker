@@ -5,14 +5,14 @@ import playersData from "../data/players.json";
 type Player = {
   id?: string | number;
   name: string;
-  position: string;         
+  position: string;
   jerseyNumber?: number;
-  age?: number;  
-  clubTeam?: string;  
+  age?: number;
+  clubTeam?: string;
   injured?: string;
-  status?: string;        
+  status?: string;
   lock?: boolean;
-  imageUrl?: string;        
+  imageUrl?: string;
 };
 
 const allPlayers: Player[] = playersData as unknown as Player[];
@@ -41,7 +41,7 @@ const HomePage = () => {
     .filter((p) => p.status === "lock" || p.lock === true)
     .sort(sortPlayers);
 
-  const lastUpdated = "2025-12-07"; // update manually when you change locks
+  const lastUpdated = "2025-12-08"; // update manually when you change locks
 
   return (
     <>
@@ -58,8 +58,14 @@ const HomePage = () => {
         <div className="top-row">
           <div className="brand">
             <span className="brand-pill" />
-            <span>Canada Men's National Team Squad Tracker</span>
+
+            <div className="brand-main">
+              <span className="brand-canada">Canada</span>
+              <span className="brand-sub">Men&apos;s National Team</span>
+              <span className="brand-sub brand-sub-tracker">Squad Tracker</span>
+            </div>
           </div>
+
           <div className="updated">Last updated: {lastUpdated}</div>
         </div>
 
@@ -71,7 +77,7 @@ const HomePage = () => {
               <p>
                 This page tracks the players I consider{" "}
                 <strong>virtual locks</strong> for the next World Cup squad
-                based on current form, usage, and context. Everyone below feels
+                based on current form, usage, and squad history. Everyone below feels
                 extremely hard to leave off a healthy roster.
               </p>
             </div>
@@ -84,7 +90,7 @@ const HomePage = () => {
 
           <div className="hero-meta">
             <span>
-              <span className="dot-divider" /> 23-man projection baseline
+              <span className="dot-divider" /> 26-man projection baseline
             </span>
             <span>
               <span className="dot-divider" /> Injuries &amp; form can still
@@ -159,7 +165,7 @@ const HomePage = () => {
           </div>
 
           <p className="locks-note">
-            This table only includes players marked as locks in my data set.
+            * This table only includes players marked as locks in my opinion.
             Bubble/ fringe players will live on a separate page.
           </p>
         </section>

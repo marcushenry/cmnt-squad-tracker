@@ -2,11 +2,95 @@
   {
     "id": 1,
     "name": "Alphonso Davies",
-    "position": "DF",
+    "position": "Left-Back",
     "jerseyNumber": 19,
     "age": "24",
     "clubTeam": "Bayern Munich",
     "status": "lock",
-    "injured": true
+    "injured": true,
+    "imageUrl": "/players/davies.webp"
+  },
+{
+    "id": 2,
+    "name": "Jonathan David",
+    "position": "Center-Forward",
+    "jerseyNumber": 20,
+    "age": "25",
+    "clubTeam": "Juventus FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/david.webp"
+  },
+  {
+    "id": 3,
+    "name": "Dayne St. Clair",
+    "position": "GK",
+    "jerseyNumber": 1,
+    "age": "28",
+    "clubTeam": "Minnesota United FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/dayne.webp"
+  },
+  {
+    "id": 4,
+    "name": "Maxime Crépeau",
+    "position": "GK",
+    "jerseyNumber": 16,
+    "age": "31",
+    "clubTeam": "Portland Timbers",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/maxime.webp"
+  },
+  {
+    "id": 5,
+    "name": "Tajon Buchanan",
+    "position": "Right-Wing",
+    "jerseyNumber": 17,
+    "age": "26",
+    "clubTeam": "Villerreal CF",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/tajon.webp"
+  },
+  {
+    "id": 6,
+    "name": "Moise Bombito",
+    "position": "Center-Back",
+    "jerseyNumber": 15,
+    "age": "25",
+    "clubTeam": "OGC Nice",
+    "status": "lock",
+    "injured": true,
+    "imageUrl": "/players/bombito.webp"
+  },
+  {
+    "id": 7,
+    "name": "Stephen Eustáquio",
+    "position": "Central Midfield",
+    "jerseyNumber": 6,
+    "age": "28",
+    "clubTeam": "FC Porto",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/stephen.webp"
+  },
+  {
+    "id": 8,
+    "name": "Alistair Johnston",
+    "position": "Right-Back",
+    "jerseyNumber": 2,
+    "age": "27",
+    "clubTeam": "Celtic FC",
+    "status": "lock",
+    "injured": true,
+    "imageUrl": "/players/johnston.webp"
   }
+
 ]
+
+  
+
+
+
