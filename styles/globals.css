@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
 
 @keyframes watermarkPulse {
-  0%   { opacity: 0.04; }
-  50%  { opacity: 0.075; }
-  100% { opacity: 0.04; }
+  0%   { opacity: 0.08; }
+  50%  { opacity: 0.18; }
+  100% { opacity: 0.1; }
 }
 
 
@@ -166,7 +166,7 @@ body {
   background-size: 20%;              /* tweak 30–60% as you like */
   background-position: right 10px bottom -22px;
   opacity: 0.05;                    
-  animation: watermarkPulse 3s ease-in-out infinite;
+  animation: watermarkPulse 4s infinite ease-in-out;
   pointer-events: none;
   z-index: 0;
 }
