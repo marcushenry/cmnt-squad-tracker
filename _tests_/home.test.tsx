@@ -11,3 +11,14 @@ test("renders the hero heading", () => {
 
   expect(heading).toBeInTheDocument();
 });
+
+test("renders the Locks Roster Table section heading", () => {
+  render(<HomePage />);
+
+  const sectionHeading = screen.getByRole("heading", {
+    level: 2,
+    name: /locks roster table/i,
+  });
+
+  expect(sectionHeading).toBeInTheDocument();
+});
