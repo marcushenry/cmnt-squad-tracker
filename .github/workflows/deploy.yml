@@ -2,7 +2,7 @@ name: Deploy CMNT Squad Tracker
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "dev" ]
 
 jobs:
   build-and-deploy:
@@ -10,6 +10,10 @@ jobs:
     permissions:
       id-token: write
       contents: read
+
+    env:
+      S3_BUCKET: ${{ github.ref == 'refs/heads/main' && 'cmnt-squad-tracker-goose' || 'cmnt-squad-tracker-goose-dev' }}
+
 
     steps:
       - name: Checkout repository
@@ -40,4 +44,4 @@ jobs:
           aws-region: us-east-1
 
       - name: Sync files to S3
-        run: aws s3 sync out/ s3://cmnt-squad-tracker-goose --delete
+        run: aws s3 sync out/ s3://$S3_BUCKET --delete
