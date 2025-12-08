@@ -41,7 +41,7 @@ const HomePage = () => {
     .filter((p) => p.status === "lock" || p.lock === true)
     .sort(sortPlayers);
 
-  const lastUpdated = "2025-12-08"; // update manually when you change locks
+  const lastUpdated = "2025-12-09"; // update manually when you change locks
 
   return (
     <>
