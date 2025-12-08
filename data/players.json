@@ -1,61 +1,12 @@
 [
-    {
-        "id": 1,
-        "name": "Maxime Crepeau",
-        "position": "Goalkeeper",
-        "club": "Portland Timbers",
-        "age": 31,
-        "status": "Locked"
-    },
-    {
-        "id": 2,
-        "name": "Dayne St. Clair",
-        "position": "Goalkeeper",
-        "club": "Minnesota United FC",
-        "age": 28,
-        "status": "Locked"
-    },
-    {
-        "id": 3,
-        "name": "Alphonso Davies",
-        "position": "Left-Back",
-        "club": "Bayern Munich",
-        "age": 24,
-        "status": "Locked",
-        "health": "Injured"
-    },
-
-    {
-        "id": 4,
-        "name": "Derek Cornelius",
-        "position": "Center-Back",
-        "club": "Rangers FC",
-        "age": 28,
-        "status": "Locked"
-    },
-
-        {
-        "id": 5,
-        "name": "Alfie Jones",
-        "position": "Center-Back",
-        "club": "Middlesbrough FC",
-        "age": 28,
-        "status": "Locked"
-    },
-    {
-        "id": 5,
-        "name": "Jonathan David",
-        "position": "Center-Forward",
-        "club": "Juventus FC",
-        "age": 25,
-        "status": "Locked"
-    },
-    {
-        "id": 6,
-        "name": "Stephen Eustáquio",
-        "position": "Central Midfield",
-        "club": "FC Porto",
-        "age": 28,
-        "status": "Locked"
-    }
+  {
+    "id": 1,
+    "name": "Alphonso Davies",
+    "position": "DF",
+    "jerseyNumber": 19,
+    "age": "24",
+    "clubteam": "Bayern Munich",
+    "status": "lock",
+    "injured": true
+  }
 ]
