@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Alphonso Davies",
-    "position": "Left-Back",
+    "position": "LB",
     "jerseyNumber": 19,
     "age": "24",
     "clubTeam": "Bayern Munich",
@@ -13,7 +13,7 @@
 {
     "id": 2,
     "name": "Jonathan David",
-    "position": "Center-Forward",
+    "position": "ST",
     "jerseyNumber": 20,
     "age": "25",
     "clubTeam": "Juventus FC",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "name": "Tajon Buchanan",
-    "position": "Right-Wing",
+    "position": "RW",
     "jerseyNumber": 17,
     "age": "26",
     "clubTeam": "Villareal CF",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "name": "Moïse Bombito",
-    "position": "Center-Back",
+    "position": "CB",
     "jerseyNumber": 15,
     "age": "25",
     "clubTeam": "OGC Nice",
@@ -68,7 +68,7 @@
   {
     "id": 7,
     "name": "Stephen Eustáquio",
-    "position": "Central Midfield",
+    "position": "CM",
     "jerseyNumber": 6,
     "age": "28",
     "clubTeam": "FC Porto",
@@ -79,7 +79,7 @@
   {
     "id": 8,
     "name": "Alistair Johnston",
-    "position": "Right-Back",
+    "position": "RB",
     "jerseyNumber": 2,
     "age": "27",
     "clubTeam": "Celtic FC",
@@ -91,7 +91,7 @@
   {
     "id": 9,
     "name": "Ismaël Kone",
-    "position": "Central Midfield",
+    "position": "CM",
     "jerseyNumber": 8,
     "age": "23",
     "clubTeam": "U.S. Sassuolo Calcio",
@@ -102,13 +102,70 @@
   {
     "id": 10,
     "name": "Derek Cornelius",
-    "position": "Center-Back",
+    "position": "CB",
     "jerseyNumber": 13,
     "age": "28",
     "clubTeam": "Rangers FC",
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/derek.webp"
+  },
+  {
+    "id": 11,
+    "name": "Promise David",
+    "position": "ST",
+    "jerseyNumber": 24,
+    "age": "24",
+    "clubTeam": "Royale Union Saint-Gilloise",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/promise.webp"
+  },
+  {
+    "id": 12,
+    "name": "Richie Laryea",
+    "position": "RB",
+    "jerseyNumber": 22,
+    "age": "30",
+    "clubTeam": "Toronto FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/richie.webp"
+  },
+
+  {
+    "id": 14,
+    "name": "Alfie Jones",
+    "position": "CB",
+    "jerseyNumber": 15,
+    "age": "28",
+    "clubTeam": "Middlesbrough FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/alfie.webp"
+  },
+
+  {
+    "id": 15,
+    "name": "Niko Sigur",
+    "position": "RB",
+    "jerseyNumber": 23,
+    "age": "22",
+    "clubTeam": "Hajduk Split",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/niko.webp"
+  },
+  {
+    "id": 16,
+    "name": "Tani Oluwaseyi",
+    "position": "ST",
+    "jerseyNumber": 12,
+    "age": "25",
+    "clubTeam": "Villareal CF",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/tani.webp"
   }
 
 ]

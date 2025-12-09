@@ -21,9 +21,13 @@ const allPlayers: Player[] = playersData as unknown as Player[];
 // helper to sort by position order then jersey #
 const POSITION_ORDER: Record<string, number> = {
   GK: 0,
-  DF: 1,
-  MF: 2,
-  FW: 3,
+  LB: 1,
+  CB: 2,
+  RB: 3,
+  CM: 4,
+  LW: 5,
+  RW: 6,
+  ST: 7,
 };
 
 function sortPlayers(a: Player, b: Player) {
@@ -187,7 +191,7 @@ const HomePage = () => {
 function positionLabel(code: string) {
   switch (code?.toUpperCase()) {
     case "GK":
-      return "Goalkeeper";
+      return "GK";
     case "DF":
       return "Defender";
     case "MF":
