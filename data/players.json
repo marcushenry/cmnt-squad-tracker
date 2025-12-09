@@ -7,7 +7,7 @@
     "age": "24",
     "clubTeam": "Bayern Munich",
     "status": "lock",
-    "injured": true,
+    "injured": false,
     "imageUrl": "/players/davies.webp"
   },
 {
@@ -62,7 +62,7 @@
     "age": "25",
     "clubTeam": "OGC Nice",
     "status": "lock",
-    "injured": true,
+    "injured": false,
     "imageUrl": "/players/bombito.webp"
   },
   {
@@ -84,7 +84,7 @@
     "age": "27",
     "clubTeam": "Celtic FC",
     "status": "lock",
-    "injured": true,
+    "injured": false,
     "imageUrl": "/players/johnston.webp"
   },
 
