@@ -40,7 +40,7 @@ export function LastClubGame({ lastClubGame }: LastClubGameProps) {
 
   return (
     <div className="last-game-card">
-      <p className="last-game-title">Last Club Match</p>
+      <div className="player-tooltip-header">Last Club Match</div>
 
       {/* Date */}
       <p className="last-game-date">📅 {date}</p>
