@@ -283,10 +283,12 @@ body {
 .locks-table-wrapper {
   margin-top: 8px;
   border-radius: 18px;
-  overflow: hidden;
+  overflow-x: auto;      /* NEW */
+  overflow-y: hidden;    /* NEW */
   border: 1px solid var(--border-subtle);
   background: var(--bg-elevated);
   box-shadow: var(--shadow-soft);
+  -webkit-overflow-scrolling: touch; /* smooth scroll */
 }
 
 /* Table base */
@@ -296,6 +298,7 @@ body {
   border-collapse: collapse;
   font-size: 0.85rem;
   background: var(--bg-elevated);
+  min-width: 700px;
 }
 
 .locks-table thead {
@@ -516,6 +519,8 @@ body {
 @media (max-width: 720px) {
   .locks-table-wrapper {
     border-radius: 14px;
+    overflow-x: auto;  
+    overflow-y: hidden;
   }
 
   .locks-table {
