@@ -24,7 +24,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/david.webp",
-    "clubIconUrl": "/clubs/juventus.png"
+    "clubIconUrl": "/clubs/juventus.png",
+    "goals": 37,
+    "caps": 73
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/dayne.webp",
-    "clubIconUrl": "/clubs/minnesota.png"
+    "clubIconUrl": "/clubs/minnesota.png",
+    "caps": 18
   },
   {
     "id": 4,
@@ -48,7 +51,8 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/maxime.webp",
-    "clubIconUrl": "/clubs/portland.png"
+    "clubIconUrl": "/clubs/portland.png",
+    "caps": 29
   },
   {
     "id": 5,
@@ -60,7 +64,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/tajon.webp",
-    "clubIconUrl": "/clubs/villareal.png"
+    "clubIconUrl": "/clubs/villareal.png",
+    "caps": 57,
+    "goals": 8
   },
   {
     "id": 6,
@@ -86,7 +92,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/stephen.webp",
-    "clubIconUrl": "/clubs/porto.png"
+    "clubIconUrl": "/clubs/porto.png",
+    "goals": 4,
+    "caps": 54
   },
   {
     "id": 8,
@@ -98,7 +106,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/johnston.webp",
-    "clubIconUrl": "/clubs/celtic.png"
+    "clubIconUrl": "/clubs/celtic.png",
+    "caps": 56,
+    "goals": 1
   },
 
   {
@@ -111,7 +121,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/kone.webp",
-    "clubIconUrl": "/clubs/sassuolo.png"
+    "clubIconUrl": "/clubs/sassuolo.png",
+    "caps": 37,
+    "goals": 4
   },
   {
     "id": 10,
@@ -137,7 +149,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/promise.webp",
-    "clubIconUrl": "/clubs/union.png"
+    "clubIconUrl": "/clubs/union.png",
+    "goals": 3,
+    "caps": 8
   },
   {
     "id": 12,
@@ -149,7 +163,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/richie.webp",
-    "clubIconUrl": "/clubs/toronto.png"
+    "clubIconUrl": "/clubs/toronto.png",
+    "caps": 71,
+    "goals": 1
   },
 
   {
@@ -177,7 +193,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/niko.webp",
-    "clubIconUrl": "/clubs/split.png"
+    "clubIconUrl": "/clubs/split.png",
+    "caps": 15,
+    "goals": 2
   },
   {
     "id": 16,
@@ -189,7 +207,9 @@
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/tani.webp",
-    "clubIconUrl": "/clubs/villareal.png"
+    "clubIconUrl": "/clubs/villareal.png",
+    "goals": 2,
+    "caps": 21
   }
 
 ]
