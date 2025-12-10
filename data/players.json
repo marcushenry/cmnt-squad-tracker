@@ -13,17 +13,16 @@
     "goals": 15,
     "assists": 12,
     "clubIconUrl": "/clubs/bayern.png",
-
+    "apiTeamId": 157,
+    "apiPlayerId": 509,
     "lastClubGame": {
-      "opponent": "Sporting CP",
-      "date": "2025-12-09",
-      "result": "W 3-1",
-      "minutesPlayed": 3,
-      "goals": 0
-
-    } 
+      "date": "2023-05-27",
+      "opponent": "1. FC Köln",
+      "competition": "Bundesliga",
+      "result": "W 2-1"
+    }
   },
-{
+  {
     "id": 2,
     "name": "Jonathan David",
     "position": "ST",
@@ -69,7 +68,7 @@
     "position": "RW",
     "jerseyNumber": 17,
     "age": "26",
-    "clubTeam": "Villareal CF",
+    "clubTeam": "Villarreal CF",
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/tajon.webp",
@@ -89,7 +88,15 @@
     "imageUrl": "/players/bombito.webp",
     "clubIconUrl": "/clubs/nice.png",
     "caps": 19,
-    "goals": 0
+    "goals": 0,
+    "apiTeamId": 84,
+    "apiPlayerId": 407017,
+    "lastClubGame": {
+      "date": "2023-06-03",
+      "opponent": "Lyon",
+      "competition": "Ligue 1",
+      "result": "W 3-1"
+    }
   },
   {
     "id": 7,
@@ -119,7 +126,6 @@
     "caps": 56,
     "goals": 1
   },
-
   {
     "id": 9,
     "name": "Ismaël Kone",
@@ -176,7 +182,6 @@
     "caps": 71,
     "goals": 1
   },
-
   {
     "id": 14,
     "name": "Alfie Jones",
@@ -191,7 +196,6 @@
     "caps": 1,
     "goals": 0
   },
-
   {
     "id": 15,
     "name": "Niko Sigur",
@@ -212,7 +216,7 @@
     "position": "ST",
     "jerseyNumber": 12,
     "age": "25",
-    "clubTeam": "Villareal CF",
+    "clubTeam": "Villarreal CF",
     "status": "lock",
     "injured": false,
     "imageUrl": "/players/tani.webp",
@@ -220,8 +224,8 @@
     "goals": 2,
     "caps": 21
   },
-
-  {"id": 17,
+  {
+    "id": 17,
     "name": "Nathan Saliba",
     "position": "CM",
     "jerseyNumber": 19,
@@ -234,10 +238,4 @@
     "goals": 2,
     "caps": 11
   }
-
 ]
-
-  
-
-
-
