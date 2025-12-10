@@ -210,6 +210,20 @@
     "clubIconUrl": "/clubs/villareal.png",
     "goals": 2,
     "caps": 21
+  },
+
+  {"id": 17,
+    "name": "Nathan Saliba",
+    "position": "CM",
+    "jerseyNumber": 19,
+    "age": "21",
+    "clubTeam": "R.S.C. Anderlecht",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/saliba.webp",
+    "clubIconUrl": "/clubs/anderlecht.png",
+    "goals": 2,
+    "caps": 11
   }
 
 ]
