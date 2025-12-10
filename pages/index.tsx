@@ -1,6 +1,8 @@
 // pages/index.tsx
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import playersData from "../data/players.json";
+
 
 type Player = {
   id?: string | number;
@@ -21,6 +23,14 @@ type Player = {
 };
 
 const allPlayers: Player[] = playersData as unknown as Player[];
+
+const WORLDCUP_KICKOFF = new Date("2026-06-12T00:00:00Z");
+
+function getDaysRemaining(target: Date): number {
+  const now = new Date();
+  const diff = target.getTime() - now.getTime();
+  return diff > 0 ? Math.ceil(diff / (1000 * 60 * 60 * 24)) : 0;
+}
 
 
 // helper to sort by position order then jersey #
@@ -51,6 +61,19 @@ const HomePage = () => {
     .sort(sortPlayers);
 
   const lastUpdated = "2025-12-09"; // update manually when you change locks
+
+  const [daysLeft, setDaysLeft] = useState(
+    getDaysRemaining(WORLDCUP_KICKOFF)
+  );
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDaysLeft(getDaysRemaining(WORLDCUP_KICKOFF));
+    }, 1000 * 60 * 60); // update every hour
+
+    return () => clearInterval(timer);
+  }, []);
+
 
   return (
     <>
@@ -204,7 +227,18 @@ const HomePage = () => {
             * This table only includes players marked as locks in my opinion.
             Bubble/ fringe players will live on a separate page.
           </p>
-        </section>
+
+          <section className="countdown">
+            <p className="countdown-label">
+              Countdown to Canada&apos;s World Cup opener
+            </p>
+            <p className="countdown-timer">
+              {daysLeft} days to go
+            </p>
+          </section>
+
+        </section> {/* closes .locks-section */}
+
 
         {/* Footer */}
         <footer className="footer">
@@ -215,7 +249,9 @@ const HomePage = () => {
             scenario.
           </p>
         </footer>
+
       </main>
+
     </>
   );
 };

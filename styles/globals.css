@@ -514,6 +514,30 @@ body {
   max-width: 640px;
 }
 
+.countdown {
+  margin-top: 24px;
+  text-align: right;
+  padding-right: 6px;
+}
+
+.countdown-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0px;   
+  line-height: 1.2; 
+}
+
+.countdown-timer {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--accent-deep);
+  margin-top: 1px;      
+  line-height: 1.2;
+}
+
 /* Responsive tweaks */
 
 @media (max-width: 720px) {
