@@ -2,6 +2,7 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import playersData from "../data/players.json";
+import { LastClubGame } from "../components/LastClubGame";
 
 
 type Player = {
@@ -19,6 +20,12 @@ type Player = {
   goals?: number;
   assists?: number;
   clubIconUrl?: string;
+  lastClubGame?: {
+    date: string;
+    opponent: string;
+    minutesPlayed: number;
+    result: string;
+  };
 
 };
 
@@ -180,13 +187,15 @@ const HomePage = () => {
                             <div className="player-tooltip-header">Stats</div>
                             <div className="player-tooltip-body">
                               <div className="player-tooltip-row">
-                                <span>🇨🇦 Caps</span>
+                                <span>🇨🇦 Canada Caps</span>
                                 <span>{p.caps ?? "—"}</span>
                               </div>
                               <div className="player-tooltip-row">
-                                <span>⚽ Goals</span>
+                                <span>⚽ International Goals</span>
                                 <span>{p.goals ?? "—"}</span>
                               </div>
+                              <hr className="tooltip-divider" />
+                              <LastClubGame lastClubGame={p.lastClubGame} />
                             </div>
                           </div>
 
@@ -217,6 +226,7 @@ const HomePage = () => {
                         )}
                       </div>
                     </td>
+
                   </tr>
                 ))}
               </tbody>

@@ -12,7 +12,16 @@
     "caps": 58,
     "goals": 15,
     "assists": 12,
-    "clubIconUrl": "/clubs/bayern.png"
+    "clubIconUrl": "/clubs/bayern.png",
+
+    "lastClubGame": {
+      "opponent": "Borussia Dortmund",
+      "date": "2024-10-05",
+      "result": "W 3-1",
+      "minutesPlayed": 90,
+      "goals": 1
+
+    } 
   },
 {
     "id": 2,
