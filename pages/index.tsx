@@ -13,6 +13,11 @@ type Player = {
   status?: string;
   lock?: boolean;
   imageUrl?: string;
+  caps?: number;
+  goals?: number;
+  assists?: number;
+  clubIconUrl?: string;
+
 };
 
 const allPlayers: Player[] = playersData as unknown as Player[];
@@ -144,13 +149,40 @@ const HomePage = () => {
                             {initials(p.name)}
                           </div>
                         )}
-                        <span className="player-name">{p.name}</span>
+
+                        <div className="player-name-wrapper">
+                          <span className="player-name">{p.name}</span>
+
+                          <div className="player-tooltip">
+                            <div className="player-tooltip-header">Stats</div>
+                            <div className="player-tooltip-body">
+                              <div className="player-tooltip-row">
+                                <span>🇨🇦 Caps</span>
+                                <span>{p.caps ?? "—"}</span>
+                              </div>
+                              <div className="player-tooltip-row">
+                                <span>⚽ Goals</span>
+                                <span>{p.goals ?? "—"}</span>
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
                       </div>
+
                     </td>
                     <td>{p.jerseyNumber ?? "—"}</td>
                     <td>{positionLabel(p.position)}</td>
                     <td>{p.age ?? "—"}</td>
-                    <td>{p.clubTeam ?? "—"}</td>
+                    <td>
+                      <div className="club-cell">
+                        {p.clubIconUrl && (
+                          <img src={p.clubIconUrl} alt="" className="club-icon" />
+                        )}
+                        <span>{p.clubTeam ?? "—"}</span>
+                      </div>
+                    </td>
+
                     <td>
                       <div className="status-pill-container">
                         {p.status === "lock" && (

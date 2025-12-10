@@ -8,7 +8,11 @@
     "clubTeam": "Bayern Munich",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/davies.webp"
+    "imageUrl": "/players/davies.webp",
+    "caps": 58,
+    "goals": 15,
+    "assists": 12,
+    "clubIconUrl": "/clubs/bayern.png"
   },
 {
     "id": 2,
@@ -19,7 +23,8 @@
     "clubTeam": "Juventus FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/david.webp"
+    "imageUrl": "/players/david.webp",
+    "clubIconUrl": "/clubs/juventus.png"
   },
   {
     "id": 3,
@@ -30,7 +35,8 @@
     "clubTeam": "Minnesota United FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/dayne.webp"
+    "imageUrl": "/players/dayne.webp",
+    "clubIconUrl": "/clubs/minnesota.png"
   },
   {
     "id": 4,
@@ -41,7 +47,8 @@
     "clubTeam": "Portland Timbers",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/maxime.webp"
+    "imageUrl": "/players/maxime.webp",
+    "clubIconUrl": "/clubs/portland.png"
   },
   {
     "id": 5,
@@ -52,7 +59,8 @@
     "clubTeam": "Villareal CF",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/tajon.webp"
+    "imageUrl": "/players/tajon.webp",
+    "clubIconUrl": "/clubs/villareal.png"
   },
   {
     "id": 6,
@@ -63,18 +71,22 @@
     "clubTeam": "OGC Nice",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/bombito.webp"
+    "imageUrl": "/players/bombito.webp",
+    "clubIconUrl": "/clubs/nice.png",
+    "caps": 19,
+    "goals": 0
   },
   {
     "id": 7,
     "name": "Stephen Eustáquio",
     "position": "CM",
-    "jerseyNumber": 6,
+    "jerseyNumber": 7,
     "age": "28",
     "clubTeam": "FC Porto",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/stephen.webp"
+    "imageUrl": "/players/stephen.webp",
+    "clubIconUrl": "/clubs/porto.png"
   },
   {
     "id": 8,
@@ -85,7 +97,8 @@
     "clubTeam": "Celtic FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/johnston.webp"
+    "imageUrl": "/players/johnston.webp",
+    "clubIconUrl": "/clubs/celtic.png"
   },
 
   {
@@ -97,7 +110,8 @@
     "clubTeam": "U.S. Sassuolo Calcio",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/kone.webp"
+    "imageUrl": "/players/kone.webp",
+    "clubIconUrl": "/clubs/sassuolo.png"
   },
   {
     "id": 10,
@@ -108,7 +122,10 @@
     "clubTeam": "Rangers FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/derek.webp"
+    "caps": 40,
+    "goals": 1,
+    "imageUrl": "/players/derek.webp",
+    "clubIconUrl": "/clubs/rangers.png"
   },
   {
     "id": 11,
@@ -119,7 +136,8 @@
     "clubTeam": "Royale Union Saint-Gilloise",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/promise.webp"
+    "imageUrl": "/players/promise.webp",
+    "clubIconUrl": "/clubs/union.png"
   },
   {
     "id": 12,
@@ -130,7 +148,8 @@
     "clubTeam": "Toronto FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/richie.webp"
+    "imageUrl": "/players/richie.webp",
+    "clubIconUrl": "/clubs/toronto.png"
   },
 
   {
@@ -142,7 +161,10 @@
     "clubTeam": "Middlesbrough FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/alfie.webp"
+    "imageUrl": "/players/alfie.webp",
+    "clubIconUrl": "/clubs/Middlesborough.png",
+    "caps": 1,
+    "goals": 0
   },
 
   {
@@ -154,7 +176,8 @@
     "clubTeam": "Hajduk Split",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/niko.webp"
+    "imageUrl": "/players/niko.webp",
+    "clubIconUrl": "/clubs/split.png"
   },
   {
     "id": 16,
@@ -165,7 +188,8 @@
     "clubTeam": "Villareal CF",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/tani.webp"
+    "imageUrl": "/players/tani.webp",
+    "clubIconUrl": "/clubs/villareal.png"
   }
 
 ]
