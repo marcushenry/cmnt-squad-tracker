@@ -222,7 +222,15 @@
     "imageUrl": "/players/tani.webp",
     "clubIconUrl": "/clubs/villareal.png",
     "goals": 2,
-    "caps": 21
+    "caps": 21,
+    "apiTeamId": 533,
+    "apiPlayerId": 351587,
+    "lastClubGame": {
+      "date": "2023-06-04",
+      "opponent": "Atletico Madrid",
+      "competition": "La Liga",
+      "result": "D 2-2"
+    }
   },
   {
     "id": 17,
