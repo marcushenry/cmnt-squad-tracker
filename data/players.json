@@ -8,29 +8,22 @@
     "clubTeam": "Bayern Munich",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/davies.webp"
-  },
-{
-    "id": 2,
-    "name": "Jonathan David",
-    "position": "ST",
-    "jerseyNumber": 20,
-    "age": "25",
-    "clubTeam": "Juventus FC",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/david.webp"
-  },
-  {
-    "id": 3,
-    "name": "Dayne St. Clair",
-    "position": "GK",
-    "jerseyNumber": 1,
-    "age": "28",
-    "clubTeam": "Minnesota United FC",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/dayne.webp"
+    "imageUrl": "/players/davies.webp",
+    "caps": 58,
+    "goals": 15,
+    "assists": 12,
+    "clubIconUrl": "/clubs/bayern.png",
+    "apiTeamId": 157,
+    "apiPlayerId": 509,
+    "lastClubGame": {
+      "date": "2025-12-09",
+      "opponent": "Sporting CP",
+      "competition": "UEFA Champions League",
+      "minutes": 2,
+      "goals": null,
+      "assists": 0,
+      "result": "W 3-1"
+    }
   },
   {
     "id": 4,
@@ -41,53 +34,47 @@
     "clubTeam": "Portland Timbers",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/maxime.webp"
+    "imageUrl": "/players/maxime.webp",
+    "clubIconUrl": "/clubs/portland.png",
+    "caps": 29,
+    "goals": 0,
+    "apiPlayerId": 51274,
+    "apiTeamId": 1617,
+    "lastClubGame": {
+      "date": "2025-11-10",
+      "opponent": "San Diego",
+      "competition": "Major League Soccer",
+      "minutes": null,
+      "goals": null,
+      "assists": null,
+      "result": "L 0-4"
+    }
   },
   {
-    "id": 5,
-    "name": "Tajon Buchanan",
-    "position": "RW",
-    "jerseyNumber": 17,
-    "age": "26",
-    "clubTeam": "Villareal CF",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/tajon.webp"
-  },
-  {
-    "id": 6,
-    "name": "Moïse Bombito",
+    "id": 14,
+    "name": "Alfie Jones",
     "position": "CB",
     "jerseyNumber": 15,
-    "age": "25",
-    "clubTeam": "OGC Nice",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/bombito.webp"
-  },
-  {
-    "id": 7,
-    "name": "Stephen Eustáquio",
-    "position": "CM",
-    "jerseyNumber": 6,
     "age": "28",
-    "clubTeam": "FC Porto",
+    "clubTeam": "Middlesbrough FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/stephen.webp"
+    "imageUrl": "/players/alfie.webp",
+    "clubIconUrl": "/clubs/middlesbrough.png",
+    "caps": 1,
+    "goals": 0,
+    "apiTeamId": 70,
+    "apiPlayerId": 18938,
+    "lastClubGame": {
+      "date": "2025-12-09",
+      "opponent": "Charlton",
+      "competition": "Championship",
+      "minutes": 90,
+      "goals": null,
+      "assists": 0,
+      "result": "W 2-1"
+    }
   },
-  {
-    "id": 8,
-    "name": "Alistair Johnston",
-    "position": "RB",
-    "jerseyNumber": 2,
-    "age": "27",
-    "clubTeam": "Celtic FC",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/johnston.webp"
-  },
-
   {
     "id": 9,
     "name": "Ismaël Kone",
@@ -97,7 +84,165 @@
     "clubTeam": "U.S. Sassuolo Calcio",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/kone.webp"
+    "imageUrl": "/players/kone.webp",
+    "clubIconUrl": "/clubs/sassuolo.png",
+    "caps": 37,
+    "goals": 4,
+    "apiTeamId": 488,
+    "apiPlayerId": 328046,
+    "lastClubGame": {
+      "date": "2025-12-06",
+      "opponent": "Fiorentina",
+      "competition": "Serie A",
+      "minutes": 90,
+      "goals": 1,
+      "assists": 0,
+      "result": "W 3-1"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Jonathan David",
+    "position": "ST",
+    "jerseyNumber": 20,
+    "age": "25",
+    "clubTeam": "Juventus FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/david.webp",
+    "clubIconUrl": "/clubs/juventus.png",
+    "goals": 37,
+    "caps": 73,
+    "apiPlayerId": 8489,
+    "apiTeamId": 496,
+    "lastClubGame": {
+      "date": "2025-12-10",
+      "opponent": "Pafos",
+      "competition": "UEFA Champions League",
+      "minutes": 74,
+      "goals": 1,
+      "assists": 0,
+      "result": "W 2-0"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Dayne St. Clair",
+    "position": "GK",
+    "jerseyNumber": 1,
+    "age": "28",
+    "clubTeam": "Minnesota United FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/dayne.webp",
+    "clubIconUrl": "/clubs/minnesota.png",
+    "caps": 18,
+    "goals": 0,
+    "apiPlayerId": 51148,
+    "apiTeamId": 1612,
+    "lastClubGame": {
+      "date": "2025-11-25",
+      "opponent": "San Diego",
+      "competition": "Major League Soccer",
+      "minutes": 90,
+      "goals": null,
+      "assists": null,
+      "result": "L 0-1"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Tajon Buchanan",
+    "position": "RW",
+    "jerseyNumber": 17,
+    "age": "26",
+    "clubTeam": "Villarreal CF",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/tajon.webp",
+    "clubIconUrl": "/clubs/villareal.png",
+    "caps": 57,
+    "goals": 8,
+    "apiPlayerId": 51016,
+    "apiTeamId": 533,
+    "lastClubGame": {
+      "date": "2025-12-10",
+      "opponent": "FC Copenhagen",
+      "competition": "UEFA Champions League",
+      "minutes": 45,
+      "goals": null,
+      "assists": 0,
+      "result": "L 2-3"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Moïse Bombito",
+    "position": "CB",
+    "jerseyNumber": 15,
+    "age": "25",
+    "clubTeam": "OGC Nice",
+    "status": "lock",
+    "injured": true,
+    "imageUrl": "/players/bombito.webp",
+    "clubIconUrl": "/clubs/nice.png",
+    "caps": 19,
+    "goals": 0,
+    "apiTeamId": 84,
+    "apiPlayerId": 407017,
+    "lastClubGame": {
+      "date": "2025-12-11",
+      "opponent": "SC Braga",
+      "competition": "UEFA Europa League",
+      "result": "L 0-1"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Stephen Eustáquio",
+    "position": "CM",
+    "jerseyNumber": 7,
+    "age": "28",
+    "clubTeam": "FC Porto",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/stephen.webp",
+    "clubIconUrl": "/clubs/porto.png",
+    "goals": 4,
+    "caps": 54,
+    "apiTeamId": 212,
+    "apiPlayerId": 35570,
+    "lastClubGame": {
+      "date": "2025-12-11",
+      "opponent": "Malmo FF",
+      "competition": "UEFA Europa League",
+      "minutes": 33,
+      "goals": null,
+      "assists": 0,
+      "result": "W 2-1"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Alistair Johnston",
+    "position": "RB",
+    "jerseyNumber": 2,
+    "age": "27",
+    "clubTeam": "Celtic FC",
+    "status": "lock",
+    "injured": true,
+    "imageUrl": "/players/johnston.webp",
+    "clubIconUrl": "/clubs/celtic.png",
+    "caps": 56,
+    "goals": 1,
+    "apiTeamId": 247,
+    "apiPlayerId": 78547,
+    "lastClubGame": {
+      "date": "2025-12-11",
+      "opponent": "AS Roma",
+      "competition": "UEFA Europa League",
+      "result": "L 0-3"
+    }
   },
   {
     "id": 10,
@@ -107,8 +252,19 @@
     "age": "28",
     "clubTeam": "Rangers FC",
     "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/derek.webp"
+    "injured": true,
+    "caps": 40,
+    "goals": 1,
+    "imageUrl": "/players/derek.webp",
+    "clubIconUrl": "/clubs/rangers.png",
+    "apiTeamId": 257,
+    "apiPlayerId": 51295,
+    "lastClubGame": {
+      "date": "2025-12-11",
+      "opponent": "Ferencvarosi TC",
+      "competition": "UEFA Europa League",
+      "result": "L 1-2"
+    }
   },
   {
     "id": 11,
@@ -119,7 +275,21 @@
     "clubTeam": "Royale Union Saint-Gilloise",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/promise.webp"
+    "imageUrl": "/players/promise.webp",
+    "clubIconUrl": "/clubs/union.png",
+    "goals": 3,
+    "caps": 8,
+    "apiTeamId": 1393,
+    "apiPlayerId": 313353,
+    "lastClubGame": {
+      "date": "2025-12-09",
+      "opponent": "Marseille",
+      "competition": "UEFA Champions League",
+      "minutes": 26,
+      "goals": null,
+      "assists": 0,
+      "result": "L 2-3"
+    }
   },
   {
     "id": 12,
@@ -130,21 +300,22 @@
     "clubTeam": "Toronto FC",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/richie.webp"
+    "imageUrl": "/players/richie.webp",
+    "clubIconUrl": "/clubs/toronto.png",
+    "caps": 71,
+    "goals": 1,
+    "apiPlayerId": 50816,
+    "apiTeamId": 1601,
+    "lastClubGame": {
+      "date": "2025-10-18",
+      "opponent": "Orlando City SC",
+      "competition": "Major League Soccer",
+      "minutes": 90,
+      "goals": null,
+      "assists": 0,
+      "result": "W 4-2"
+    }
   },
-
-  {
-    "id": 14,
-    "name": "Alfie Jones",
-    "position": "CB",
-    "jerseyNumber": 15,
-    "age": "28",
-    "clubTeam": "Middlesbrough FC",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/alfie.webp"
-  },
-
   {
     "id": 15,
     "name": "Niko Sigur",
@@ -154,7 +325,21 @@
     "clubTeam": "Hajduk Split",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/niko.webp"
+    "imageUrl": "/players/niko.webp",
+    "clubIconUrl": "/clubs/split.png",
+    "caps": 15,
+    "goals": 2,
+    "apiTeamId": 608,
+    "apiPlayerId": 416901,
+    "lastClubGame": {
+      "date": "2025-12-06",
+      "opponent": "Dinamo Zagreb",
+      "competition": "HNL",
+      "minutes": 74,
+      "goals": null,
+      "assists": 0,
+      "result": "D 1-1"
+    }
   },
   {
     "id": 16,
@@ -162,15 +347,48 @@
     "position": "ST",
     "jerseyNumber": 12,
     "age": "25",
-    "clubTeam": "Villareal CF",
+    "clubTeam": "Villarreal CF",
     "status": "lock",
     "injured": false,
-    "imageUrl": "/players/tani.webp"
+    "imageUrl": "/players/tani.webp",
+    "clubIconUrl": "/clubs/villareal.png",
+    "goals": 2,
+    "caps": 21,
+    "apiTeamId": 533,
+    "apiPlayerId": 351587,
+    "lastClubGame": {
+      "date": "2025-12-10",
+      "opponent": "FC Copenhagen",
+      "competition": "UEFA Champions League",
+      "minutes": 45,
+      "goals": 1,
+      "assists": 0,
+      "result": "L 2-3"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Nathan Saliba",
+    "position": "CM",
+    "jerseyNumber": 19,
+    "age": "21",
+    "clubTeam": "R.S.C. Anderlecht",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/saliba.webp",
+    "clubIconUrl": "/clubs/anderlecht.png",
+    "goals": 2,
+    "caps": 11,
+    "apiPlayerId": 294824,
+    "apiTeamId": 554,
+    "lastClubGame": {
+      "date": "2025-12-07",
+      "opponent": "KVC Westerlo",
+      "competition": "Jupiler Pro League",
+      "minutes": 29,
+      "goals": null,
+      "assists": 0,
+      "result": "L 0-4"
+    }
   }
-
 ]
-
-  
-
-
-

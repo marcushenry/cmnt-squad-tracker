@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "build:static": "next build",
-    "test": "jest"
+    "test": "jest",
+    "update:last-games": "tsx tools/update-last-games.ts",
+    "fetch:api-ids": "tsx tools/fetch-api-ids.ts"
   },
   "dependencies": {
     "next": "16.0.7",
@@ -24,10 +26,12 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-jest": "^30.2.0",
+    "dotenv": "^17.2.3",
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

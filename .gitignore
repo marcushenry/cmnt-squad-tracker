@@ -41,6 +41,11 @@ yarn-error.log*
 next-env.d.ts
 
 /infra/.terraform
+<<<<<<< HEAD
 /infra/terraform.tfstate
 /infra/terraform.tfstate.backup
+=======
+/infra/*.tfstate
+/infra/*.tfstate.backup
+>>>>>>> origin/dev
 

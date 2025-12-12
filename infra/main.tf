@@ -11,6 +11,181 @@ provider "aws" {
   region = "us-east-1"
 }
 
+############################################
+# Shared data sources (ACM cert + hosted zone)
+############################################
+
+# Use your new ACM cert that includes:
+# marcushenry.ca, *.marcushenry.ca, cmnt-dev.marcushenry.ca, cmnt.marcushenry.ca
+data "aws_acm_certificate" "marcushenry" {
+  domain      = "marcushenry.ca"
+  statuses    = ["ISSUED"]
+  most_recent = true
+}
+
+# Public hosted zone for marcushenry.ca
+data "aws_route53_zone" "marcushenry" {
+  name         = "marcushenry.ca."
+  private_zone = false
+}
+
+############################################
+# CloudFront distribution for DEV
+#  - Origin: dev S3 website endpoint
+#  - Domain: cmnt-dev.marcushenry.ca
+############################################
+
+resource "aws_cloudfront_distribution" "cmnt_dev" {
+  enabled             = true
+  default_root_object = "index.html"
+
+  # Custom domain for this distribution
+  aliases = [
+    "cmnt-dev.marcushenry.ca",
+  ]
+
+  # Origin: S3 *website* endpoint for your DEV bucket
+  origin {
+    domain_name = aws_s3_bucket_website_configuration.site_dev.website_endpoint
+    origin_id   = "cmnt-dev-s3-website-origin"
+
+    # Because this is a website endpoint, it must be a "custom origin"
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1.2"]
+    }
+  }
+
+  default_cache_behavior {
+    target_origin_id       = "cmnt-dev-s3-website-origin"
+    viewer_protocol_policy = "redirect-to-https"
+
+    allowed_methods = ["GET", "HEAD"]
+    cached_methods  = ["GET", "HEAD"]
+
+    compress = true
+
+    # Simple legacy-style forwarding (no query strings or cookies)
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+  }
+
+  price_class = "PriceClass_100" # NA + EU, keeps cost down
+
+  viewer_certificate {
+    acm_certificate_arn      = data.aws_acm_certificate.marcushenry.arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
+  }
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+}
+
+############################################
+# Route 53 record for cmnt-dev.marcushenry.ca
+############################################
+
+resource "aws_route53_record" "cmnt_dev" {
+  zone_id = data.aws_route53_zone.marcushenry.zone_id
+  name    = "cmnt-dev"
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.cmnt_dev.domain_name
+    zone_id                = aws_cloudfront_distribution.cmnt_dev.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+############################################
+# CloudFront distribution for PROD
+#  - Origin: prod S3 website endpoint
+#  - Domain: cmnt.marcushenry.ca
+############################################
+
+resource "aws_cloudfront_distribution" "cmnt_prod" {
+  enabled             = true
+  default_root_object = "index.html"
+
+  aliases = [
+    "cmnt.marcushenry.ca",
+  ]
+
+  origin {
+    # PROD S3 website endpoint
+    domain_name = aws_s3_bucket_website_configuration.site.website_endpoint
+    origin_id   = "cmnt-prod-s3-website-origin"
+
+    custom_origin_config {
+      http_port              = 80
+      https_port             = 443
+      origin_protocol_policy = "http-only"
+      origin_ssl_protocols   = ["TLSv1.2"]
+    }
+  }
+
+  default_cache_behavior {
+    target_origin_id       = "cmnt-prod-s3-website-origin"
+    viewer_protocol_policy = "redirect-to-https"
+
+    allowed_methods = ["GET", "HEAD"]
+    cached_methods  = ["GET", "HEAD"]
+
+    compress = true
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+  }
+
+  price_class = "PriceClass_100"
+
+  viewer_certificate {
+    acm_certificate_arn      = data.aws_acm_certificate.marcushenry.arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
+  }
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "none"
+    }
+  }
+}
+
+############################################
+# Route 53 record for cmnt.marcushenry.ca → CloudFront PROD
+############################################
+
+resource "aws_route53_record" "cmnt_prod" {
+  zone_id = data.aws_route53_zone.marcushenry.zone_id
+  name    = "cmnt"
+  type    = "A"
+
+  alias {
+    name                   = aws_cloudfront_distribution.cmnt_prod.domain_name
+    zone_id                = aws_cloudfront_distribution.cmnt_prod.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
+
+
+
 variable "bucket_name" {
   type    = string
   default = "cmnt-squad-tracker-goose"

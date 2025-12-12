@@ -1,6 +1,9 @@
 // pages/index.tsx
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import playersData from "../data/players.json";
+import { LastClubGame } from "../components/LastClubGame";
+
 
 type Player = {
   id?: string | number;
@@ -13,9 +16,28 @@ type Player = {
   status?: string;
   lock?: boolean;
   imageUrl?: string;
+  caps?: number;
+  goals?: number;
+  assists?: number;
+  clubIconUrl?: string;
+  lastClubGame?: {
+    date: string;
+    opponent: string;
+    minutesPlayed: number;
+    result: string;
+  };
+
 };
 
 const allPlayers: Player[] = playersData as unknown as Player[];
+
+const WORLDCUP_KICKOFF = new Date("2026-06-12T00:00:00Z");
+
+function getDaysRemaining(target: Date): number {
+  const now = new Date();
+  const diff = target.getTime() - now.getTime();
+  return diff > 0 ? Math.ceil(diff / (1000 * 60 * 60 * 24)) : 0;
+}
 
 
 // helper to sort by position order then jersey #
@@ -45,7 +67,20 @@ const HomePage = () => {
     .filter((p) => p.status === "lock" || p.lock === true)
     .sort(sortPlayers);
 
-  const lastUpdated = "2025-12-09"; // update manually when you change locks
+  const lastUpdated = "2025-12-12"; // update manually when you change locks
+
+  const [daysLeft, setDaysLeft] = useState(
+    getDaysRemaining(WORLDCUP_KICKOFF)
+  );
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDaysLeft(getDaysRemaining(WORLDCUP_KICKOFF));
+    }, 1000 * 60 * 60); // update every hour
+
+    return () => clearInterval(timer);
+  }, []);
+
 
   return (
     <>
@@ -93,9 +128,7 @@ const HomePage = () => {
           </div>
 
           <div className="hero-meta">
-            <span>
-              <span className="dot-divider" /> 26-man projection baseline
-            </span>
+           
             <span>
               <span className="dot-divider" /> Injuries &amp; form can still
               change
@@ -144,13 +177,42 @@ const HomePage = () => {
                             {initials(p.name)}
                           </div>
                         )}
-                        <span className="player-name">{p.name}</span>
+
+                        <div className="player-name-wrapper">
+                          <span className="player-name">{p.name}</span>
+
+                          <div className="player-tooltip">
+                            <div className="player-tooltip-header">International Stats</div>
+                            <div className="player-tooltip-body">
+                              <div className="player-tooltip-row">
+                                <span>🇨🇦 Canada Caps</span>
+                                <span>{p.caps ?? "—"}</span>
+                              </div>
+                              <div className="player-tooltip-row">
+                                <span>⚽ International Goals</span>
+                                <span>{p.goals ?? "—"}</span>
+                              </div>
+                              <hr className="tooltip-divider" />
+                              <LastClubGame lastClubGame={p.lastClubGame} />
+                            </div>
+                          </div>
+
+                        </div>
                       </div>
+
                     </td>
                     <td>{p.jerseyNumber ?? "—"}</td>
                     <td>{positionLabel(p.position)}</td>
                     <td>{p.age ?? "—"}</td>
-                    <td>{p.clubTeam ?? "—"}</td>
+                    <td>
+                      <div className="club-cell">
+                        {p.clubIconUrl && (
+                          <img src={p.clubIconUrl} alt="" className="club-icon" />
+                        )}
+                        <span>{p.clubTeam ?? "—"}</span>
+                      </div>
+                    </td>
+
                     <td>
                       <div className="status-pill-container">
                         {p.status === "lock" && (
@@ -162,6 +224,7 @@ const HomePage = () => {
                         )}
                       </div>
                     </td>
+
                   </tr>
                 ))}
               </tbody>
@@ -172,7 +235,18 @@ const HomePage = () => {
             * This table only includes players marked as locks in my opinion.
             Bubble/ fringe players will live on a separate page.
           </p>
-        </section>
+
+          <section className="countdown">
+            <p className="countdown-label">
+              Countdown to Canada&apos;s World Cup opener
+            </p>
+            <p className="countdown-timer">
+              {daysLeft} days to go
+            </p>
+          </section>
+
+        </section> {/* closes .locks-section */}
+
 
         {/* Footer */}
         <footer className="footer">
@@ -183,7 +257,9 @@ const HomePage = () => {
             scenario.
           </p>
         </footer>
+
       </main>
+
     </>
   );
 };
