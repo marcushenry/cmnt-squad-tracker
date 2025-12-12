@@ -555,7 +555,7 @@ body {
   .locks-table-wrapper {
     border-radius: 14px;
     overflow-x: auto;  
-    overflow-y: hidden;
+    overflow-y: visible;
   }
 
   .locks-table {
