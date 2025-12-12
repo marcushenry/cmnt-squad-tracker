@@ -23,6 +23,71 @@
     }
   },
   {
+    "id": 4,
+    "name": "Maxime Crépeau",
+    "position": "GK",
+    "jerseyNumber": 16,
+    "age": "31",
+    "clubTeam": "Portland Timbers",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/maxime.webp",
+    "clubIconUrl": "/clubs/portland.png",
+    "caps": 29,
+    "apiPlayerId": 51274,
+    "apiTeamId": 1617,
+    "lastClubGame": {
+      "date": "2022-10-09",
+      "opponent": "Real Salt Lake",
+      "competition": "Major League Soccer",
+      "result": "L 1-3"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Alfie Jones",
+    "position": "CB",
+    "jerseyNumber": 15,
+    "age": "28",
+    "clubTeam": "Middlesbrough FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/alfie.webp",
+    "clubIconUrl": "/clubs/middlesbrough.png",
+    "caps": 1,
+    "goals": 0,
+    "apiTeamId": 70,
+    "apiPlayerId": 319480,
+    "lastClubGame": {
+      "date": "2023-05-17",
+      "opponent": "Coventry",
+      "competition": "Championship",
+      "result": "L 0-1"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Ismaël Kone",
+    "position": "CM",
+    "jerseyNumber": 8,
+    "age": "23",
+    "clubTeam": "U.S. Sassuolo Calcio",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/kone.webp",
+    "clubIconUrl": "/clubs/sassuolo.png",
+    "caps": 37,
+    "goals": 4,
+    "apiTeamId": 488,
+    "apiPlayerId": 245002,
+    "lastClubGame": {
+      "date": "2023-06-02",
+      "opponent": "Fiorentina",
+      "competition": "Serie A",
+      "result": "L 1-3"
+    }
+  },
+  {
     "id": 2,
     "name": "Jonathan David",
     "position": "ST",
@@ -34,7 +99,15 @@
     "imageUrl": "/players/david.webp",
     "clubIconUrl": "/clubs/juventus.png",
     "goals": 37,
-    "caps": 73
+    "caps": 73,
+    "apiPlayerId": 8489,
+    "apiTeamId": 496,
+    "lastClubGame": {
+      "date": "2023-06-04",
+      "opponent": "Udinese",
+      "competition": "Serie A",
+      "result": "W 1-0"
+    }
   },
   {
     "id": 3,
@@ -47,20 +120,18 @@
     "injured": false,
     "imageUrl": "/players/dayne.webp",
     "clubIconUrl": "/clubs/minnesota.png",
-    "caps": 18
-  },
-  {
-    "id": 4,
-    "name": "Maxime Crépeau",
-    "position": "GK",
-    "jerseyNumber": 16,
-    "age": "31",
-    "clubTeam": "Portland Timbers",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/maxime.webp",
-    "clubIconUrl": "/clubs/portland.png",
-    "caps": 29
+    "caps": 18,
+    "apiPlayerId": 51148,
+    "apiTeamId": 1612,
+    "lastClubGame": {
+      "date": "2022-10-18",
+      "opponent": "FC Dallas",
+      "competition": "Major League Soccer",
+      "minutes": 120,
+      "goals": null,
+      "assists": null,
+      "result": "D 1-1"
+    }
   },
   {
     "id": 5,
@@ -74,7 +145,15 @@
     "imageUrl": "/players/tajon.webp",
     "clubIconUrl": "/clubs/villareal.png",
     "caps": 57,
-    "goals": 8
+    "goals": 8,
+    "apiPlayerId": 51016,
+    "apiTeamId": 533,
+    "lastClubGame": {
+      "date": "2023-06-04",
+      "opponent": "Atletico Madrid",
+      "competition": "La Liga",
+      "result": "D 2-2"
+    }
   },
   {
     "id": 6,
@@ -110,7 +189,18 @@
     "imageUrl": "/players/stephen.webp",
     "clubIconUrl": "/clubs/porto.png",
     "goals": 4,
-    "caps": 54
+    "caps": 54,
+    "apiTeamId": 212,
+    "apiPlayerId": 35570,
+    "lastClubGame": {
+      "date": "2023-06-04",
+      "opponent": "SC Braga",
+      "competition": "Taça de Portugal",
+      "minutes": 89,
+      "goals": null,
+      "assists": null,
+      "result": "W 2-0"
+    }
   },
   {
     "id": 8,
@@ -124,21 +214,15 @@
     "imageUrl": "/players/johnston.webp",
     "clubIconUrl": "/clubs/celtic.png",
     "caps": 56,
-    "goals": 1
-  },
-  {
-    "id": 9,
-    "name": "Ismaël Kone",
-    "position": "CM",
-    "jerseyNumber": 8,
-    "age": "23",
-    "clubTeam": "U.S. Sassuolo Calcio",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/kone.webp",
-    "clubIconUrl": "/clubs/sassuolo.png",
-    "caps": 37,
-    "goals": 4
+    "goals": 1,
+    "apiTeamId": 247,
+    "apiPlayerId": 78547,
+    "lastClubGame": {
+      "date": "2023-06-03",
+      "opponent": "Inverness CT",
+      "competition": "FA Cup",
+      "result": "W 3-1"
+    }
   },
   {
     "id": 10,
@@ -152,7 +236,15 @@
     "caps": 40,
     "goals": 1,
     "imageUrl": "/players/derek.webp",
-    "clubIconUrl": "/clubs/rangers.png"
+    "clubIconUrl": "/clubs/rangers.png",
+    "apiTeamId": 257,
+    "apiPlayerId": 51295,
+    "lastClubGame": {
+      "date": "2023-05-27",
+      "opponent": "ST Mirren",
+      "competition": "Premiership",
+      "result": "W 3-0"
+    }
   },
   {
     "id": 11,
@@ -166,7 +258,15 @@
     "imageUrl": "/players/promise.webp",
     "clubIconUrl": "/clubs/union.png",
     "goals": 3,
-    "caps": 8
+    "caps": 8,
+    "apiTeamId": 1393,
+    "apiPlayerId": 313353,
+    "lastClubGame": {
+      "date": "2023-06-04",
+      "opponent": "Club Brugge KV",
+      "competition": "Jupiler Pro League",
+      "result": "L 1-3"
+    }
   },
   {
     "id": 12,
@@ -180,21 +280,15 @@
     "imageUrl": "/players/richie.webp",
     "clubIconUrl": "/clubs/toronto.png",
     "caps": 71,
-    "goals": 1
-  },
-  {
-    "id": 14,
-    "name": "Alfie Jones",
-    "position": "CB",
-    "jerseyNumber": 15,
-    "age": "28",
-    "clubTeam": "Middlesbrough FC",
-    "status": "lock",
-    "injured": false,
-    "imageUrl": "/players/alfie.webp",
-    "clubIconUrl": "/clubs/middlesbrough.png",
-    "caps": 1,
-    "goals": 0
+    "goals": 1,
+    "apiPlayerId": 50816,
+    "apiTeamId": 1601,
+    "lastClubGame": {
+      "date": "2022-10-09",
+      "opponent": "Philadelphia Union",
+      "competition": "Major League Soccer",
+      "result": "L 0-4"
+    }
   },
   {
     "id": 15,
@@ -208,7 +302,18 @@
     "imageUrl": "/players/niko.webp",
     "clubIconUrl": "/clubs/split.png",
     "caps": 15,
-    "goals": 2
+    "goals": 2,
+    "apiTeamId": 608,
+    "apiPlayerId": 416901,
+    "lastClubGame": {
+      "date": "2023-05-28",
+      "opponent": "Sibenik",
+      "competition": "HNL",
+      "minutes": 94,
+      "goals": null,
+      "assists": null,
+      "result": "W 3-0"
+    }
   },
   {
     "id": 16,
@@ -244,6 +349,14 @@
     "imageUrl": "/players/saliba.webp",
     "clubIconUrl": "/clubs/anderlecht.png",
     "goals": 2,
-    "caps": 11
+    "caps": 11,
+    "apiPlayerId": 294824,
+    "apiTeamId": 554,
+    "lastClubGame": {
+      "date": "2023-04-23",
+      "opponent": "KV Mechelen",
+      "competition": "Jupiler Pro League",
+      "result": "L 2-3"
+    }
   }
 ]

@@ -184,7 +184,7 @@ const HomePage = () => {
                           <span className="player-name">{p.name}</span>
 
                           <div className="player-tooltip">
-                            <div className="player-tooltip-header">Stats</div>
+                            <div className="player-tooltip-header">International Stats</div>
                             <div className="player-tooltip-body">
                               <div className="player-tooltip-row">
                                 <span>🇨🇦 Canada Caps</span>
