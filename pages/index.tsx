@@ -128,9 +128,7 @@ const HomePage = () => {
           </div>
 
           <div className="hero-meta">
-            <span>
-              <span className="dot-divider" /> 26-man projection baseline
-            </span>
+           
             <span>
               <span className="dot-divider" /> Injuries &amp; form can still
               change
