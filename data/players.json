@@ -34,6 +34,7 @@
     "imageUrl": "/players/maxime.webp",
     "clubIconUrl": "/clubs/portland.png",
     "caps": 29,
+    "goals": 0,
     "apiPlayerId": 51274,
     "apiTeamId": 1617,
     "lastClubGame": {
@@ -121,6 +122,7 @@
     "imageUrl": "/players/dayne.webp",
     "clubIconUrl": "/clubs/minnesota.png",
     "caps": 18,
+    "goals": 0,
     "apiPlayerId": 51148,
     "apiTeamId": 1612,
     "lastClubGame": {

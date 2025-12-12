@@ -281,16 +281,20 @@ body {
 }
 
 .locks-table-wrapper {
-  margin-top: 8px;
+ margin-top: 8px;
   border-radius: 18px;
-  overflow-x: auto;      /* NEW */
-  overflow-y: visible;    /* NEW */
+  overflow: visible;                 
   border: 1px solid var(--border-subtle);
   background: var(--bg-elevated);
   box-shadow: var(--shadow-soft);
-  -webkit-overflow-scrolling: touch; /* smooth scroll */
 }
 
+.locks-table-scroll{
+  overflow-x: auto;                  
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 18px;              
+}
 /* Table base */
 
 .locks-table {
