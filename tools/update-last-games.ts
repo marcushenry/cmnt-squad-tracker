@@ -173,7 +173,9 @@ async function fetchLastClubGameForPlayer(
     const stats = playerEntry?.statistics?.[0];
     minutes = stats?.games?.minutes;
     goalsScored = stats?.goals?.total;
-    assists = stats?.goals?.assists;
+    const assists = stats?.goals?.assists;
+
+
   }
 
   const formattedDate =

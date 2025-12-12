@@ -74,8 +74,8 @@ export function LastClubGame({ lastClubGame }: LastClubGameProps) {
 
       {/* Result */}
       {result && (
-        <p className="last-game-line">
-          🟢 {result}
+        <p className="last-game-line result-line">
+          {result}
         </p>
       )}
 
