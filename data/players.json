@@ -16,10 +16,13 @@
     "apiTeamId": 157,
     "apiPlayerId": 509,
     "lastClubGame": {
-      "date": "2023-05-27",
-      "opponent": "1. FC Köln",
-      "competition": "Bundesliga",
-      "result": "W 2-1"
+      "date": "2025-12-09",
+      "opponent": "Sporting CP",
+      "competition": "UEFA Champions League",
+      "minutes": 2,
+      "goals": null,
+      "assists": 0,
+      "result": "W 3-1"
     }
   },
   {
@@ -38,10 +41,13 @@
     "apiPlayerId": 51274,
     "apiTeamId": 1617,
     "lastClubGame": {
-      "date": "2022-10-09",
-      "opponent": "Real Salt Lake",
+      "date": "2025-11-10",
+      "opponent": "San Diego",
       "competition": "Major League Soccer",
-      "result": "L 1-3"
+      "minutes": null,
+      "goals": null,
+      "assists": null,
+      "result": "L 0-4"
     }
   },
   {
@@ -58,12 +64,15 @@
     "caps": 1,
     "goals": 0,
     "apiTeamId": 70,
-    "apiPlayerId": 319480,
+    "apiPlayerId": 18938,
     "lastClubGame": {
-      "date": "2023-05-17",
-      "opponent": "Coventry",
+      "date": "2025-12-09",
+      "opponent": "Charlton",
       "competition": "Championship",
-      "result": "L 0-1"
+      "minutes": 90,
+      "goals": null,
+      "assists": 0,
+      "result": "W 2-1"
     }
   },
   {
@@ -80,12 +89,15 @@
     "caps": 37,
     "goals": 4,
     "apiTeamId": 488,
-    "apiPlayerId": 245002,
+    "apiPlayerId": 328046,
     "lastClubGame": {
-      "date": "2023-06-02",
+      "date": "2025-12-06",
       "opponent": "Fiorentina",
       "competition": "Serie A",
-      "result": "L 1-3"
+      "minutes": 90,
+      "goals": 1,
+      "assists": 0,
+      "result": "W 3-1"
     }
   },
   {
@@ -104,10 +116,13 @@
     "apiPlayerId": 8489,
     "apiTeamId": 496,
     "lastClubGame": {
-      "date": "2023-06-04",
-      "opponent": "Udinese",
-      "competition": "Serie A",
-      "result": "W 1-0"
+      "date": "2025-12-10",
+      "opponent": "Pafos",
+      "competition": "UEFA Champions League",
+      "minutes": 74,
+      "goals": 1,
+      "assists": 0,
+      "result": "W 2-0"
     }
   },
   {
@@ -126,13 +141,13 @@
     "apiPlayerId": 51148,
     "apiTeamId": 1612,
     "lastClubGame": {
-      "date": "2022-10-18",
-      "opponent": "FC Dallas",
+      "date": "2025-11-25",
+      "opponent": "San Diego",
       "competition": "Major League Soccer",
-      "minutes": 120,
+      "minutes": 90,
       "goals": null,
-      "assists": null,
-      "result": "D 1-1"
+      "assists": 0,
+      "result": "L 0-1"
     }
   },
   {
@@ -151,10 +166,13 @@
     "apiPlayerId": 51016,
     "apiTeamId": 533,
     "lastClubGame": {
-      "date": "2023-06-04",
-      "opponent": "Atletico Madrid",
-      "competition": "La Liga",
-      "result": "D 2-2"
+      "date": "2025-12-10",
+      "opponent": "FC Copenhagen",
+      "competition": "UEFA Champions League",
+      "minutes": 45,
+      "goals": null,
+      "assists": 0,
+      "result": "L 2-3"
     }
   },
   {
@@ -173,10 +191,10 @@
     "apiTeamId": 84,
     "apiPlayerId": 407017,
     "lastClubGame": {
-      "date": "2023-06-03",
-      "opponent": "Lyon",
-      "competition": "Ligue 1",
-      "result": "W 3-1"
+      "date": "2025-12-11",
+      "opponent": "SC Braga",
+      "competition": "UEFA Europa League",
+      "result": "L 0-1"
     }
   },
   {
@@ -195,13 +213,13 @@
     "apiTeamId": 212,
     "apiPlayerId": 35570,
     "lastClubGame": {
-      "date": "2023-06-04",
-      "opponent": "SC Braga",
-      "competition": "Taça de Portugal",
-      "minutes": 89,
+      "date": "2025-12-11",
+      "opponent": "Malmo FF",
+      "competition": "UEFA Europa League",
+      "minutes": 33,
       "goals": null,
-      "assists": null,
-      "result": "W 2-0"
+      "assists": 0,
+      "result": "W 2-1"
     }
   },
   {
@@ -220,10 +238,10 @@
     "apiTeamId": 247,
     "apiPlayerId": 78547,
     "lastClubGame": {
-      "date": "2023-06-03",
-      "opponent": "Inverness CT",
-      "competition": "FA Cup",
-      "result": "W 3-1"
+      "date": "2025-12-11",
+      "opponent": "AS Roma",
+      "competition": "UEFA Europa League",
+      "result": "L 0-3"
     }
   },
   {
@@ -242,10 +260,10 @@
     "apiTeamId": 257,
     "apiPlayerId": 51295,
     "lastClubGame": {
-      "date": "2023-05-27",
-      "opponent": "ST Mirren",
-      "competition": "Premiership",
-      "result": "W 3-0"
+      "date": "2025-12-11",
+      "opponent": "Ferencvarosi TC",
+      "competition": "UEFA Europa League",
+      "result": "L 1-2"
     }
   },
   {
@@ -264,10 +282,13 @@
     "apiTeamId": 1393,
     "apiPlayerId": 313353,
     "lastClubGame": {
-      "date": "2023-06-04",
-      "opponent": "Club Brugge KV",
-      "competition": "Jupiler Pro League",
-      "result": "L 1-3"
+      "date": "2025-12-09",
+      "opponent": "Marseille",
+      "competition": "UEFA Champions League",
+      "minutes": 26,
+      "goals": null,
+      "assists": 0,
+      "result": "L 2-3"
     }
   },
   {
@@ -286,10 +307,13 @@
     "apiPlayerId": 50816,
     "apiTeamId": 1601,
     "lastClubGame": {
-      "date": "2022-10-09",
-      "opponent": "Philadelphia Union",
+      "date": "2025-10-18",
+      "opponent": "Orlando City SC",
       "competition": "Major League Soccer",
-      "result": "L 0-4"
+      "minutes": 90,
+      "goals": null,
+      "assists": 0,
+      "result": "W 4-2"
     }
   },
   {
@@ -308,13 +332,13 @@
     "apiTeamId": 608,
     "apiPlayerId": 416901,
     "lastClubGame": {
-      "date": "2023-05-28",
-      "opponent": "Sibenik",
+      "date": "2025-12-06",
+      "opponent": "Dinamo Zagreb",
       "competition": "HNL",
-      "minutes": 94,
+      "minutes": 74,
       "goals": null,
       "assists": null,
-      "result": "W 3-0"
+      "result": "D 1-1"
     }
   },
   {
@@ -333,10 +357,13 @@
     "apiTeamId": 533,
     "apiPlayerId": 351587,
     "lastClubGame": {
-      "date": "2023-06-04",
-      "opponent": "Atletico Madrid",
-      "competition": "La Liga",
-      "result": "D 2-2"
+      "date": "2025-12-10",
+      "opponent": "FC Copenhagen",
+      "competition": "UEFA Champions League",
+      "minutes": 45,
+      "goals": 1,
+      "assists": 0,
+      "result": "L 2-3"
     }
   },
   {
@@ -355,10 +382,13 @@
     "apiPlayerId": 294824,
     "apiTeamId": 554,
     "lastClubGame": {
-      "date": "2023-04-23",
-      "opponent": "KV Mechelen",
+      "date": "2025-12-07",
+      "opponent": "KVC Westerlo",
       "competition": "Jupiler Pro League",
-      "result": "L 2-3"
+      "minutes": 29,
+      "goals": null,
+      "assists": 0,
+      "result": "L 0-4"
     }
   }
 ]

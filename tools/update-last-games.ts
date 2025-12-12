@@ -43,8 +43,23 @@ async function apiGet(pathWithQuery: string) {
 }
 
 /**
+ * Paid-plan helper: get the most recent *played* fixture for a team.
+ * We request `status=FT` to avoid returning the next scheduled match.
+ */
+async function getLastPlayedFixtureForTeam(teamId: number): Promise<any | null> {
+  const data = await apiGet(`/fixtures?team=${teamId}&last=1&status=FT`);
+
+  if (!data.response || data.response.length === 0) {
+    return null;
+  }
+
+  return data.response[0];
+}
+
+
+/**
  * Helper: get the most recent fixture for a team in a given season,
- * without using the `last` parameter (not allowed on free plans).
+ * using either the `last` parameter (paid plans) or a season-based fallback.
  */
 async function getLatestFixtureForTeam(
   teamId: number,
@@ -87,22 +102,24 @@ async function fetchLastClubGameForPlayer(
     return null;
   }
 
-  const currentYear = 2022;
+  const currentYear = new Date().getFullYear();
   let fixture: any | null = null;
 
   console.log(
     `🔍 Fetching latest fixture for ${player.name} (team ${player.apiTeamId})...`
   );
 
-  // 1) Try current season
-  fixture = await getLatestFixtureForTeam(player.apiTeamId, currentYear);
+  // 1) First try paid-plan shortcut (most recent completed match)
+  fixture = await getLastPlayedFixtureForTeam(player.apiTeamId);
 
-  // 2) If none, try previous season as a fallback
+  // 2) Season-based fallback (works even if `last` is unavailable for any reason)
   if (!fixture) {
-    fixture = await getLatestFixtureForTeam(
-      player.apiTeamId,
-      currentYear - 1
-    );
+    fixture = await getLatestFixtureForTeam(player.apiTeamId, currentYear);
+  }
+
+  // 3) If none, try previous season as a fallback
+  if (!fixture) {
+    fixture = await getLatestFixtureForTeam(player.apiTeamId, currentYear - 1);
   }
 
   if (!fixture) {
