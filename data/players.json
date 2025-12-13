@@ -21,7 +21,6 @@
       "competition": "UEFA Champions League",
       "minutes": 2,
       "goals": null,
-      "assists": 0,
       "result": "W 3-1"
     }
   },
@@ -46,7 +45,6 @@
       "competition": "Major League Soccer",
       "minutes": null,
       "goals": null,
-      "assists": null,
       "result": "L 0-4"
     }
   },
@@ -66,13 +64,12 @@
     "apiTeamId": 70,
     "apiPlayerId": 18938,
     "lastClubGame": {
-      "date": "2025-12-09",
-      "opponent": "Charlton",
+      "date": "2025-12-13",
+      "opponent": "QPR",
       "competition": "Championship",
-      "minutes": 90,
+      "minutes": 96,
       "goals": null,
-      "assists": 0,
-      "result": "W 2-1"
+      "result": "W 3-1"
     }
   },
   {
@@ -96,7 +93,6 @@
       "competition": "Serie A",
       "minutes": 90,
       "goals": 1,
-      "assists": 0,
       "result": "W 3-1"
     }
   },
@@ -121,7 +117,6 @@
       "competition": "UEFA Champions League",
       "minutes": 74,
       "goals": 1,
-      "assists": 0,
       "result": "W 2-0"
     }
   },
@@ -146,7 +141,6 @@
       "competition": "Major League Soccer",
       "minutes": 90,
       "goals": null,
-      "assists": null,
       "result": "L 0-1"
     }
   },
@@ -171,7 +165,6 @@
       "competition": "UEFA Champions League",
       "minutes": 45,
       "goals": null,
-      "assists": 0,
       "result": "L 2-3"
     }
   },
@@ -218,7 +211,6 @@
       "competition": "UEFA Europa League",
       "minutes": 33,
       "goals": null,
-      "assists": 0,
       "result": "W 2-1"
     }
   },
@@ -287,7 +279,6 @@
       "competition": "UEFA Champions League",
       "minutes": 26,
       "goals": null,
-      "assists": 0,
       "result": "L 2-3"
     }
   },
@@ -312,7 +303,6 @@
       "competition": "Major League Soccer",
       "minutes": 90,
       "goals": null,
-      "assists": 0,
       "result": "W 4-2"
     }
   },
@@ -332,13 +322,12 @@
     "apiTeamId": 608,
     "apiPlayerId": 416901,
     "lastClubGame": {
-      "date": "2025-12-06",
-      "opponent": "Dinamo Zagreb",
+      "date": "2025-12-13",
+      "opponent": "NK Lokomotiva Zagreb",
       "competition": "HNL",
-      "minutes": 74,
+      "minutes": 90,
       "goals": null,
-      "assists": 0,
-      "result": "D 1-1"
+      "result": "W 3-1"
     }
   },
   {
@@ -362,7 +351,6 @@
       "competition": "UEFA Champions League",
       "minutes": 45,
       "goals": 1,
-      "assists": 0,
       "result": "L 2-3"
     }
   },
@@ -387,8 +375,31 @@
       "competition": "Jupiler Pro League",
       "minutes": 29,
       "goals": null,
-      "assists": 0,
       "result": "L 0-4"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Ali Ahmed",
+    "position": "LW",
+    "jerseyNumber": 20,
+    "age": "25",
+    "clubTeam": "Vancouver Whitecaps FC",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/ali.webp",
+    "clubIconUrl": "/clubs/vancouver.png",
+    "goals": 1,
+    "caps": 22,
+    "apiTeamId": 1603,
+    "apiPlayerId": 362145,
+    "lastClubGame": {
+      "date": "2025-12-06",
+      "opponent": "Inter Miami",
+      "competition": "Major League Soccer",
+      "minutes": 68,
+      "goals": 1,
+      "result": "L 1-3"
     }
   }
 ]

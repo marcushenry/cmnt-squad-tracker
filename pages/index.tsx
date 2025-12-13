@@ -116,7 +116,7 @@ const HomePage = () => {
               <p>
                 This page tracks the players I consider{" "}
                 <strong>virtual locks</strong> for the next World Cup squad
-                based on current form, usage, and squad history. Everyone below feels
+                based on current form, usage, and squad history. As the World Cup approaches, more players will be added to this list until it consists of a full 26 man roster. Everyone below feels
                 extremely hard to leave off a healthy roster.
               </p>
             </div>
