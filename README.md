@@ -11,7 +11,7 @@ https://cmnt.marcushenry.ca
 
 This project was created to:
 - Track CMNT players and their most recent club appearances
-- Surface meaningful indicators such as minutes played, goals, assists, and match results
+- Surface meaningful indicators such as minutes played, goals, and match results
 - Practice building and deploying a production-style web application using modern cloud and DevOps tooling
 
 Rather than a static roster, the goal is to show who is actively playing at club level ahead of international competitions.
