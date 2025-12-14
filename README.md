@@ -1,40 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# CMNT Squad Tracker
 
-## Getting Started
+A web app for tracking Canada Men’s National Team (CMNT) players and their current club form, built with a focus on clean UI, real data, and modern DevOps practices.
 
-First, run the development server:
+Live site:  
+https://cmnt.marcushenry.ca
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Purpose
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+This project was created to:
+- Track CMNT players and their most recent club appearances
+- Surface meaningful indicators such as minutes played, goals, assists, and match results
+- Practice building and deploying a production-style web application using modern cloud and DevOps tooling
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Rather than a static roster, the goal is to show who is actively playing at club level ahead of international competitions.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- CMNT player roster with club and position details
+- Last club game data per player (date, opponent, competition, minutes, goals, result)
+- “Last updated” timestamp for data freshness
+- Clean, responsive UI with hover-based detail views
+- Deployed as a production static site with CDN caching
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
+- Next.js (React)
+- TypeScript
+- CSS Modules
 
-## Deploy on Vercel
+### Data
+- JSON-based player data
+- Update scripts for last match statistics
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Infrastructure / DevOps
+- AWS S3 (static hosting)
+- AWS CloudFront (CDN)
+- AWS Route 53 (DNS)
+- AWS ACM (TLS certificates)
+- Infrastructure as Code (Terraform / OpenTofu)
+- GitHub for version control and environment branching (main, dev)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+---
+
+## Project Structure
+├── components/ # Reusable React components
+├── data/ # Player and match data (players.json)
+├── pages/ # Next.js pages
+├── public/ # Static assets
+├── styles/ # Global and module styles
+├── tools/ # Data update and fetch scripts
+└── infra/ # Infrastructure-as-code configuration
+
+
+---
+
+## Data Updates
+
+## Data Updates
+
+Player club data is populated using a combination of static player data and **live match data pulled from an external football API**.
+
+The **Last Club Match** statistics shown in the table (date, opponent, competition, minutes, goals, assists, result) are retrieved via update scripts and written into the project’s data layer to keep the site current.
+
+During development, data updates may be triggered manually. The project is designed to support future improvements such as:
+- Fully automated data ingestion from external football APIs
+- Scheduled or build-time data refreshes
+- Clear separation of generated data from source-controlled configuration
+
+
+---
+
+## Disclaimer
+
+This project is not affiliated with Canada Soccer.  
+All data is for informational and personal project use only.
