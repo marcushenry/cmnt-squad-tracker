@@ -60,7 +60,8 @@
     "imageUrl": "/players/maxime.webp",
     "clubIconUrl": "/clubs/portland.png",
     "caps": 29,
-    "goals": 0,
+    "cleanSheets": 10,
+    "goals": null,
     "apiPlayerId": 51274,
     "apiTeamId": 1617,
     "lastClubGame": {
@@ -136,12 +137,12 @@
     "apiPlayerId": 8489,
     "apiTeamId": 496,
     "lastClubGame": {
-      "date": "2025-12-10",
-      "opponent": "Pafos",
-      "competition": "UEFA Champions League",
-      "minutes": 74,
-      "goals": 1,
-      "result": "W 2-0"
+      "date": "2025-12-14",
+      "opponent": "Bologna",
+      "competition": "Serie A",
+      "minutes": 61,
+      "goals": null,
+      "result": "W 1-0"
     }
   },
   {
@@ -156,7 +157,8 @@
     "imageUrl": "/players/dayne.webp",
     "clubIconUrl": "/clubs/minnesota.png",
     "caps": 18,
-    "goals": 0,
+    "goals": null,
+    "cleanSheets": 10,
     "apiPlayerId": 51148,
     "apiTeamId": 1612,
     "lastClubGame": {

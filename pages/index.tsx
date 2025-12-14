@@ -18,6 +18,7 @@ type Player = {
   imageUrl?: string;
   caps?: number;
   goals?: number;
+  cleanSheets?: number;
   assists?: number;
   clubIconUrl?: string;
   lastClubGame?: {
@@ -128,7 +129,7 @@ const HomePage = () => {
           </div>
 
           <div className="hero-meta">
-           
+
             <span>
               <span className="dot-divider" /> Injuries &amp; form can still
               change
@@ -189,9 +190,18 @@ const HomePage = () => {
                                 <span>{p.caps ?? "—"}</span>
                               </div>
                               <div className="player-tooltip-row">
-                                <span>⚽ International Goals</span>
-                                <span>{p.goals ?? "—"}</span>
+                                <span>
+                                  {p.position?.toUpperCase() === "GK"
+                                    ? "🧤 Clean Sheets"
+                                    : "⚽ International Goals"}
+                                </span>
+                                <span>
+                                  {p.position?.toUpperCase() === "GK"
+                                    ? (p.cleanSheets ?? "—")
+                                    : (p.goals ?? "—")}
+                                </span>
                               </div>
+
                               <hr className="tooltip-divider" />
                               <LastClubGame lastClubGame={p.lastClubGame} />
                             </div>
