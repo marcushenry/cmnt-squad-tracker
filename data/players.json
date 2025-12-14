@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Alphonso Davies",
-    "position": "LB",
+    "position": "LW",
     "jerseyNumber": 19,
     "age": "24",
     "clubTeam": "Bayern Munich",
@@ -22,6 +22,30 @@
       "minutes": 2,
       "goals": null,
       "result": "W 3-1"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Luc de Fougerolles",
+    "position": "CB",
+    "jerseyNumber": 15,
+    "age": "20",
+    "clubTeam": "F.C.V. Dender E.H.",
+    "status": "lock",
+    "injured": false,
+    "imageUrl": "/players/luc.webp",
+    "clubIconUrl": "/clubs/dender.png",
+    "goals": 0,
+    "caps": 11,
+    "apiTeamId": 6215,
+    "apiPlayerId": 327738,
+    "lastClubGame": {
+      "date": "2025-12-05",
+      "opponent": "RAAL La Louvière",
+      "competition": "Jupiler Pro League",
+      "minutes": 18,
+      "goals": null,
+      "result": "W 2-1"
     }
   },
   {
