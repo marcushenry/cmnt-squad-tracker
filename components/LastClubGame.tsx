@@ -65,11 +65,11 @@ export function LastClubGame({ lastClubGame }: LastClubGameProps) {
         </p>
       )}
 
-   {typeof assists === "number" && assists > 0 && (
-  <p className="last-game-line">
-    🅰️ {assists} A
-  </p>
-)}
+      {typeof assists === "number" && assists > 0 && (
+        <p className="last-game-line">
+          🅰️ {assists} A
+        </p>
+      )}
 
 
 

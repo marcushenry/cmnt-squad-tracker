@@ -370,12 +370,12 @@
     "apiPlayerId": 294824,
     "apiTeamId": 554,
     "lastClubGame": {
-      "date": "2025-12-07",
-      "opponent": "KVC Westerlo",
+      "date": "2025-12-13",
+      "opponent": "St. Truiden",
       "competition": "Jupiler Pro League",
-      "minutes": 29,
-      "goals": null,
-      "result": "L 0-4"
+      "minutes": 99,
+      "goals": 1,
+      "result": "W 2-1"
     }
   },
   {

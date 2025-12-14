@@ -67,7 +67,7 @@ const HomePage = () => {
     .filter((p) => p.status === "lock" || p.lock === true)
     .sort(sortPlayers);
 
-  const lastUpdated = "2025-12-12"; // update manually when you change locks
+  const lastUpdated = "2025-12-13"; // update manually when you change locks
 
   const [daysLeft, setDaysLeft] = useState(
     getDaysRemaining(WORLDCUP_KICKOFF)
