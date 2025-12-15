@@ -1,0 +1,51 @@
+name: Update players.json (dev nightly)
+
+on:
+  schedule:
+    # 02:00 UTC = 7:00 PM MST (or 8:00 PM MDT in summer). Still "evening Calgary time".
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-last-games-dev
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout dev branch
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run updater
+        run: npm run update:last-games
+        env:
+          # your script reads process.env.FOOTBALL_API_KEY
+          FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+
+      - name: Commit & push if players.json changed
+        run: |
+          if [[ -n "$(git status --porcelain data/players.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add data/players.json
+            git commit -m "chore(dev): nightly players.json update"
+            git push origin dev
+          else
+            echo "No changes to commit"
+          fi
