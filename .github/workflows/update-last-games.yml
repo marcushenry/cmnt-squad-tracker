@@ -33,7 +33,7 @@ jobs:
       - name: Run lastClubGame updater
         run: npm run update:last-games
         env:
-          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_KEY }}
 
       - name: Commit changes if players.json changed
         run: |
