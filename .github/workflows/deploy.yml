@@ -9,7 +9,6 @@ on:
 
 jobs:
   build-and-deploy:
-    # Only run on successful updater runs, or any normal push
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
 
     runs-on: ubuntu-latest
@@ -18,20 +17,29 @@ jobs:
       id-token: write
       contents: read
 
-    env:
-      BRANCH: ${{ github.event_name == 'workflow_run'
-        && github.event.workflow_run.head_branch
-        || github.ref_name }}
-
-      S3_BUCKET: ${{ (github.event_name == 'workflow_run'
-        && github.event.workflow_run.head_branch == 'main')
-        || github.ref == 'refs/heads/main'
-        && 'cmnt-squad-tracker-goose'
-        || 'cmnt-squad-tracker-goose-dev' }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Decide deploy bucket
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_run" ]]; then
+            BRANCH="${{ github.event.workflow_run.head_branch }}"
+          else
+            BRANCH="${{ github.ref_name }}"
+          fi
+
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+
+          if [[ "$BRANCH" == "main" ]]; then
+            echo "S3_BUCKET=cmnt-squad-tracker-goose" >> $GITHUB_ENV
+          else
+            echo "S3_BUCKET=cmnt-squad-tracker-goose-dev" >> $GITHUB_ENV
+          fi
+
+      - name: Show target bucket
+        run: echo "Deploying branch=$BRANCH to s3://$S3_BUCKET"
 
       - name: Set up Node
         uses: actions/setup-node@v4
