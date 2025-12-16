@@ -63,12 +63,25 @@ function sortPlayers(a: Player, b: Player) {
   return numA - numB;
 }
 
+function formatLastUpdatedMountainTime(date = new Date()) {
+  const formattedDate = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Edmonton",
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(date);
+
+  return `Last updated: ${formattedDate} at 7:05 PM · Mountain Time`;
+}
+
+
+
 const HomePage = () => {
   const locks = allPlayers
     .filter((p) => p.status === "lock" || p.lock === true)
     .sort(sortPlayers);
 
-  const lastUpdated = "2025-12-14"; // update manually when you change locks
+const lastUpdated = formatLastUpdatedMountainTime();
 
   const [daysLeft, setDaysLeft] = useState(
     getDaysRemaining(WORLDCUP_KICKOFF)
@@ -106,7 +119,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div className="updated">Last updated: {lastUpdated}</div>
+          <div className="updated">{lastUpdated}</div>
         </div>
 
         {/* Hero (unchanged from before) */}
