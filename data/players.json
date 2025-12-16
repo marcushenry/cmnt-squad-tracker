@@ -92,7 +92,7 @@
       "date": "2025-12-13",
       "opponent": "QPR",
       "competition": "Championship",
-      "minutes": 96,
+      "minutes": 90,
       "goals": null,
       "result": "W 3-1"
     }
@@ -232,12 +232,12 @@
     "apiTeamId": 212,
     "apiPlayerId": 35570,
     "lastClubGame": {
-      "date": "2025-12-11",
-      "opponent": "Malmo FF",
-      "competition": "UEFA Europa League",
-      "minutes": 33,
+      "date": "2025-12-15",
+      "opponent": "Estrela",
+      "competition": "Primeira Liga",
+      "minutes": null,
       "goals": null,
-      "result": "W 2-1"
+      "result": "W 3-1"
     }
   },
   {
@@ -278,10 +278,10 @@
     "apiTeamId": 257,
     "apiPlayerId": 51295,
     "lastClubGame": {
-      "date": "2025-12-11",
-      "opponent": "Ferencvarosi TC",
-      "competition": "UEFA Europa League",
-      "result": "L 1-2"
+      "date": "2025-12-15",
+      "opponent": "Hibernian",
+      "competition": "Premiership",
+      "result": "W 1-0"
     }
   },
   {
@@ -399,7 +399,7 @@
       "date": "2025-12-13",
       "opponent": "St. Truiden",
       "competition": "Jupiler Pro League",
-      "minutes": 99,
+      "minutes": 90,
       "goals": 1,
       "result": "W 2-1"
     }
