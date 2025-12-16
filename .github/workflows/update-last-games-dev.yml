@@ -3,7 +3,7 @@ name: Update players.json (dev nightly)
 on:
   schedule:
     # 02:00 UTC = 7:00 PM MST (or 8:00 PM MDT in summer). Still "evening Calgary time".
-    - cron: "0 2 * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
 
 permissions:
