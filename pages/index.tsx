@@ -63,16 +63,6 @@ function sortPlayers(a: Player, b: Player) {
   return numA - numB;
 }
 
-function formatLastUpdatedMountainTime(date = new Date()) {
-  const formattedDate = new Intl.DateTimeFormat("en-CA", {
-    timeZone: "America/Edmonton",
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  }).format(date);
-
-  return `Last updated: ${formattedDate} at 7:05 PM · Mountain Time`;
-}
 
 
 
@@ -81,7 +71,8 @@ const HomePage = () => {
     .filter((p) => p.status === "lock" || p.lock === true)
     .sort(sortPlayers);
 
-const lastUpdated = formatLastUpdatedMountainTime();
+const lastUpdated = "Updated nightly around 7 PM · Mountain Time";
+
 
   const [daysLeft, setDaysLeft] = useState(
     getDaysRemaining(WORLDCUP_KICKOFF)
