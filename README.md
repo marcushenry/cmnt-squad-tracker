@@ -49,15 +49,13 @@ Rather than a static roster, the goal is to show who is actively playing at club
 
 ---
 
-## Project Structure
-├── components/ # Reusable React components
-├── data/ # Player and match data (players.json)
-├── pages/ # Next.js pages
-├── public/ # Static assets
-├── styles/ # Global and module styles
-├── tools/ # Data update and fetch scripts
-└── infra/ # Infrastructure-as-code configuration
-
+├── components/   # Reusable React components
+├── data/         # Player and match data (players.json)
+├── pages/        # Next.js pages
+├── public/       # Static assets
+├── styles/       # Global and module styles
+├── tools/        # Data update and fetch scripts
+└── infra/        # Infrastructure-as-code configuration
 
 ---
 
