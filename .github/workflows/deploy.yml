@@ -1,16 +1,15 @@
-name: Deploy CMNT Squad Tracker
+name: Deploy CMNT Squad Tracker (prod)
 
 on:
   push:
-    branches: [ "main", "dev" ]
+    branches: ["main"]
   workflow_run:
-    workflows: ["Update players.json (dev nightly)"]
+    workflows: ["Update players.json (prod nightly)"]
     types: [completed]
 
 jobs:
   build-and-deploy:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
-
     runs-on: ubuntu-latest
 
     permissions:
@@ -21,29 +20,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          # if workflow_run, deploy the exact commit that was updated
           ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
 
-
-      - name: Decide deploy bucket
-        shell: bash
-        run: |
-          if [[ "${{ github.event_name }}" == "workflow_run" ]]; then
-            BRANCH="${{ github.event.workflow_run.head_branch }}"
-          else
-            BRANCH="${{ github.ref_name }}"
-          fi
-
-          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
-
-          if [[ "$BRANCH" == "main" ]]; then
-            echo "S3_BUCKET=cmnt-squad-tracker-goose" >> $GITHUB_ENV
-          else
-            echo "S3_BUCKET=cmnt-squad-tracker-goose-dev" >> $GITHUB_ENV
-          fi
+      - name: Set target bucket (prod)
+        run: echo "S3_BUCKET=cmnt-squad-tracker-goose" >> $GITHUB_ENV
 
       - name: Show target bucket
-        run: echo "Deploying branch=${{ env.BRANCH }} to s3://${{ env.S3_BUCKET }}"
-
+        run: echo "Deploying to s3://${{ env.S3_BUCKET }}"
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -62,15 +46,6 @@ jobs:
       - name: Build static site
         run: npm run build:static
 
-      - name: Verify players.json content in repo + build output
-        shell: bash
-        run: |
-          echo "Repo data/players.json modified time:"
-          ls -la data/players.json || true
-
-          echo "Searching for players.json in out/:"
-          find out -maxdepth 4 -name "players.json" -print || true  
-          
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -79,4 +54,4 @@ jobs:
           aws-region: us-east-1
 
       - name: Sync files to S3
-        run: aws s3 sync out/ s3://$S3_BUCKET --delete
+        run: aws s3 sync out/ s3://${{ env.S3_BUCKET }} --delete

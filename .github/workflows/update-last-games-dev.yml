@@ -1,4 +1,4 @@
-name: Update players.json (dev nightly)
+name: Update players.json (prod nightly)
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: update-last-games-dev
+  group: update-last-games-prod
   cancel-in-progress: false
 
 jobs:
@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout dev branch
+      - name: Checkout main branch
         uses: actions/checkout@v4
         with:
-          ref: dev
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -34,7 +34,6 @@ jobs:
       - name: Run updater
         run: npm run update:last-games
         env:
-          # your script reads process.env.FOOTBALL_API_KEY
           FOOTBALL_API_KEY: ${{ secrets.API_FOOTBALL_KEY }}
 
       - name: Commit & push if players.json changed
@@ -44,7 +43,7 @@ jobs:
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add data/players.json
             git commit -m "chore(dev): nightly players.json update"
-            git push origin dev
+            git push origin main
           else
             echo "No changes to commit"
           fi
