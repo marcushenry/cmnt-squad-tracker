@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+
 
       - name: Decide deploy bucket
         shell: bash
@@ -39,7 +42,8 @@ jobs:
           fi
 
       - name: Show target bucket
-        run: echo "Deploying branch=$BRANCH to s3://$S3_BUCKET"
+        run: echo "Deploying branch=${{ env.BRANCH }} to s3://${{ env.S3_BUCKET }}"
+
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -58,6 +62,15 @@ jobs:
       - name: Build static site
         run: npm run build:static
 
+      - name: Verify players.json content in repo + build output
+        shell: bash
+        run: |
+          echo "Repo data/players.json modified time:"
+          ls -la data/players.json || true
+
+          echo "Searching for players.json in out/:"
+          find out -maxdepth 4 -name "players.json" -print || true  
+          
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
