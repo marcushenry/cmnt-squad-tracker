@@ -1,13 +1,38 @@
-import players from "../data/players.json";
+// pages/players.tsx
+import fs from "fs";
+import path from "path";
 
-export default function Players() {
+type Player = {
+  id: string | number;
+  name: string;
+  position: string;
+  club: string;
+  status: string;
+  health?: string;
+};
+
+type Props = {
+  players: Player[];
+};
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "data", "players.json");
+  const raw = fs.readFileSync(filePath, "utf8");
+  const players = JSON.parse(raw);
+
+  return {
+    props: { players },
+  };
+}
+
+export default function Players({ players }: Props) {
   return (
     <main style={{ padding: "2rem" }}>
       <h1>Canada Men's National Team</h1>
       <p>Current core players for the 2026 World Cup cycle:</p>
 
       <ul style={{ marginTop: "1.5rem", lineHeight: "1.8" }}>
-        {players.map((player: any) => (
+        {players.map((player) => (
           <li key={player.id}>
             <strong>{player.name}</strong> — {player.position} at {player.club}
 

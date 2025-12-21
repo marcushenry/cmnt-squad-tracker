@@ -40,12 +40,12 @@
     "apiTeamId": 6215,
     "apiPlayerId": 327738,
     "lastClubGame": {
-      "date": "2025-12-14",
-      "opponent": "Club Brugge KV",
+      "date": "2025-12-20",
+      "opponent": "Standard Liege",
       "competition": "Jupiler Pro League",
-      "minutes": 28,
+      "minutes": 45,
       "goals": null,
-      "result": "L 1-5"
+      "result": "L 0-1"
     }
   },
   {
@@ -89,12 +89,12 @@
     "apiTeamId": 70,
     "apiPlayerId": 18938,
     "lastClubGame": {
-      "date": "2025-12-13",
-      "opponent": "QPR",
+      "date": "2025-12-20",
+      "opponent": "Bristol City",
       "competition": "Championship",
-      "minutes": 90,
+      "minutes": 96,
       "goals": null,
-      "result": "W 3-1"
+      "result": "L 0-2"
     }
   },
   {
@@ -137,12 +137,12 @@
     "apiPlayerId": 8489,
     "apiTeamId": 496,
     "lastClubGame": {
-      "date": "2025-12-14",
-      "opponent": "Bologna",
+      "date": "2025-12-20",
+      "opponent": "AS Roma",
       "competition": "Serie A",
-      "minutes": 61,
+      "minutes": 8,
       "goals": null,
-      "result": "W 1-0"
+      "result": "W 2-1"
     }
   },
   {
@@ -298,12 +298,12 @@
     "apiTeamId": 1393,
     "apiPlayerId": 313353,
     "lastClubGame": {
-      "date": "2025-12-14",
-      "opponent": "Charleroi",
+      "date": "2025-12-20",
+      "opponent": "Zulte Waregem",
       "competition": "Jupiler Pro League",
-      "minutes": 90,
+      "minutes": 89,
       "goals": 1,
-      "result": "D 1-1"
+      "result": "W 2-0"
     }
   },
   {
