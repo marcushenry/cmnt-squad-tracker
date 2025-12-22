@@ -2,8 +2,8 @@ name: Deploy CMNT Squad Tracker (prod)
 
 on:
   push:
-    branches: ["main"]
-
+    branches: ["main"] 
+    
 concurrency:
   group: deploy-prod
   cancel-in-progress: true
