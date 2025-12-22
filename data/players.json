@@ -92,7 +92,7 @@
       "date": "2025-12-20",
       "opponent": "Bristol City",
       "competition": "Championship",
-      "minutes": 96,
+      "minutes": 90,
       "goals": null,
       "result": "L 0-2"
     }
@@ -232,10 +232,12 @@
     "apiTeamId": 212,
     "apiPlayerId": 35570,
     "lastClubGame": {
-      "date": "2025-12-18",
-      "opponent": "Famalicao",
-      "competition": "Taça de Portugal",
-      "result": "W 4-1"
+      "date": "2025-12-22",
+      "opponent": "Alverca",
+      "competition": "Primeira Liga",
+      "minutes": 15,
+      "goals": null,
+      "result": "W 3-0"
     }
   },
   {
