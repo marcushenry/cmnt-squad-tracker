@@ -16,12 +16,12 @@
     "apiTeamId": 157,
     "apiPlayerId": 509,
     "lastClubGame": {
-      "date": "2025-12-14",
-      "opponent": "FSV Mainz 05",
+      "date": "2025-12-21",
+      "opponent": "1. FC Heidenheim",
       "competition": "Bundesliga",
-      "minutes": 29,
+      "minutes": 17,
       "goals": null,
-      "result": "D 2-2"
+      "result": "W 4-0"
     }
   },
   {
@@ -113,12 +113,12 @@
     "apiTeamId": 488,
     "apiPlayerId": 328046,
     "lastClubGame": {
-      "date": "2025-12-14",
-      "opponent": "AC Milan",
+      "date": "2025-12-21",
+      "opponent": "Torino",
       "competition": "Serie A",
       "minutes": 90,
-      "goals": 1,
-      "result": "D 2-2"
+      "goals": null,
+      "result": "L 0-1"
     }
   },
   {
@@ -186,12 +186,12 @@
     "apiPlayerId": 51016,
     "apiTeamId": 533,
     "lastClubGame": {
-      "date": "2025-12-17",
-      "opponent": "Racing Santander",
-      "competition": "Copa del Rey",
-      "minutes": 45,
+      "date": "2025-12-21",
+      "opponent": "Barcelona",
+      "competition": "La Liga",
+      "minutes": 90,
       "goals": null,
-      "result": "L 1-2"
+      "result": "L 0-2"
     }
   },
   {
@@ -210,10 +210,10 @@
     "apiTeamId": 84,
     "apiPlayerId": 407017,
     "lastClubGame": {
-      "date": "2025-12-14",
-      "opponent": "Lens",
-      "competition": "Ligue 1",
-      "result": "L 0-2"
+      "date": "2025-12-21",
+      "opponent": "Saint Etienne",
+      "competition": "Coupe de France",
+      "result": "W 2-1"
     }
   },
   {
@@ -254,10 +254,10 @@
     "apiTeamId": 247,
     "apiPlayerId": 78547,
     "lastClubGame": {
-      "date": "2025-12-17",
-      "opponent": "Dundee Utd",
+      "date": "2025-12-21",
+      "opponent": "Aberdeen",
       "competition": "Premiership",
-      "result": "L 1-2"
+      "result": "W 3-1"
     }
   },
   {
@@ -276,10 +276,10 @@
     "apiTeamId": 257,
     "apiPlayerId": 51295,
     "lastClubGame": {
-      "date": "2025-12-15",
-      "opponent": "Hibernian",
+      "date": "2025-12-21",
+      "opponent": "Heart Of Midlothian",
       "competition": "Premiership",
-      "result": "W 1-0"
+      "result": "L 1-2"
     }
   },
   {
@@ -346,12 +346,12 @@
     "apiTeamId": 608,
     "apiPlayerId": 416901,
     "lastClubGame": {
-      "date": "2025-12-13",
-      "opponent": "NK Lokomotiva Zagreb",
+      "date": "2025-12-21",
+      "opponent": "Vukovar",
       "competition": "HNL",
       "minutes": 90,
       "goals": null,
-      "result": "W 3-1"
+      "result": "W 2-1"
     }
   },
   {
@@ -370,12 +370,12 @@
     "apiTeamId": 533,
     "apiPlayerId": 351587,
     "lastClubGame": {
-      "date": "2025-12-17",
-      "opponent": "Racing Santander",
-      "competition": "Copa del Rey",
-      "minutes": 34,
+      "date": "2025-12-21",
+      "opponent": "Barcelona",
+      "competition": "La Liga",
+      "minutes": 15,
       "goals": null,
-      "result": "L 1-2"
+      "result": "L 0-2"
     }
   },
   {
@@ -394,12 +394,12 @@
     "apiPlayerId": 294824,
     "apiTeamId": 554,
     "lastClubGame": {
-      "date": "2025-12-13",
-      "opponent": "St. Truiden",
+      "date": "2025-12-21",
+      "opponent": "Antwerp",
       "competition": "Jupiler Pro League",
-      "minutes": 90,
-      "goals": 1,
-      "result": "W 2-1"
+      "minutes": 83,
+      "goals": null,
+      "result": "D 2-2"
     }
   },
   {
