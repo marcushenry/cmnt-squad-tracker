@@ -3,13 +3,13 @@ name: Deploy CMNT Squad Tracker (prod)
 on:
   push:
     branches: ["main"]
-  workflow_run:
-    workflows: ["Update players.json (prod nightly)"]
-    types: [completed]
+
+concurrency:
+  group: deploy-prod
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     permissions:
@@ -17,11 +17,15 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (exact commit)
         uses: actions/checkout@v4
         with:
-          # if workflow_run, deploy the exact commit that was updated
-          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+          ref: ${{ github.sha }}
+
+      - name: Debug: show checked out commit
+        run: |
+          echo "github.sha=${{ github.sha }}"
+          git log -1 --oneline
 
       - name: Set target bucket (prod)
         run: echo "S3_BUCKET=cmnt-squad-tracker-goose" >> $GITHUB_ENV
@@ -33,6 +37,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -55,3 +60,4 @@ jobs:
 
       - name: Sync files to S3
         run: aws s3 sync out/ s3://${{ env.S3_BUCKET }} --delete
+
