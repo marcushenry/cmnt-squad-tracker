@@ -22,7 +22,7 @@ jobs:
         with:
           ref: ${{ github.sha }}
 
-      - name: Debug: show checked out commit
+      - name: "Debug: show checked out commit"
         run: |
           echo "github.sha=${{ github.sha }}"
           git log -1 --oneline
