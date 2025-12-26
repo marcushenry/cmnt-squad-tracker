@@ -30,7 +30,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Debug: show checked out commit + players.json top
+      - name: "Debug: show checked out commit + players.json top"
         run: |
           echo "Checked out commit:"
           git log -1 --oneline
