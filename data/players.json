@@ -89,12 +89,12 @@
     "apiTeamId": 70,
     "apiPlayerId": 18938,
     "lastClubGame": {
-      "date": "2025-12-20",
-      "opponent": "Bristol City",
+      "date": "2025-12-26",
+      "opponent": "Blackburn",
       "competition": "Championship",
-      "minutes": 90,
+      "minutes": 17,
       "goals": null,
-      "result": "L 0-2"
+      "result": "D 0-0"
     }
   },
   {
@@ -300,12 +300,12 @@
     "apiTeamId": 1393,
     "apiPlayerId": 313353,
     "lastClubGame": {
-      "date": "2025-12-20",
-      "opponent": "Zulte Waregem",
+      "date": "2025-12-26",
+      "opponent": "Cercle Brugge",
       "competition": "Jupiler Pro League",
-      "minutes": 89,
-      "goals": 1,
-      "result": "W 2-0"
+      "minutes": 90,
+      "goals": null,
+      "result": "D 1-1"
     }
   },
   {
@@ -396,12 +396,12 @@
     "apiPlayerId": 294824,
     "apiTeamId": 554,
     "lastClubGame": {
-      "date": "2025-12-21",
-      "opponent": "Antwerp",
+      "date": "2025-12-26",
+      "opponent": "Charleroi",
       "competition": "Jupiler Pro League",
-      "minutes": 83,
+      "minutes": 64,
       "goals": null,
-      "result": "D 2-2"
+      "result": "L 1-2"
     }
   },
   {
