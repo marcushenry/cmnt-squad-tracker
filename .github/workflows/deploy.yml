@@ -20,15 +20,26 @@ jobs:
       contents: read
 
     steps:
-      - name: Checkout repository (exact updater commit)
+      # IMPORTANT:
+      # Do NOT checkout workflow_run.head_sha, because the updater workflow may create+push
+      # a NEW commit during its run. head_sha is the commit at the start of the run.
+      # We want the latest main after the updater finishes.
+      - name: Checkout main (latest)
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha }}
+          ref: main
+          fetch-depth: 0
 
-      - name: Debug show checked out commit
+      - name: Debug: show checked out commit + players.json top
         run: |
-          echo "Deploying commit: ${{ github.event.workflow_run.head_sha }}"
+          echo "Checked out commit:"
           git log -1 --oneline
+          echo
+          echo "players.json last modified in git (should reflect latest commit):"
+          git show -1 --name-status -- data/players.json || true
+          echo
+          echo "First 20 lines of data/players.json:"
+          sed -n '1,20p' data/players.json
 
       - name: Set target bucket (prod)
         run: echo "S3_BUCKET=cmnt-squad-tracker-goose" >> $GITHUB_ENV
@@ -63,3 +74,10 @@ jobs:
 
       - name: Sync files to S3
         run: aws s3 sync out/ s3://${{ env.S3_BUCKET }} --delete
+
+      # Optional but recommended: prevent CloudFront/browser from caching HTML forever
+      - name: Set no-cache headers for HTML entrypoints
+        run: |
+          aws s3 cp out/index.html  s3://${{ env.S3_BUCKET }}/index.html  --cache-control "no-cache, no-store, must-revalidate" --content-type "text/html; charset=utf-8" --metadata-directive REPLACE
+          aws s3 cp out/players.html s3://${{ env.S3_BUCKET }}/players.html --cache-control "no-cache, no-store, must-revalidate" --content-type "text/html; charset=utf-8" --metadata-directive REPLACE
+          aws s3 cp out/404.html    s3://${{ env.S3_BUCKET }}/404.html    --cache-control "no-cache, no-store, must-revalidate" --content-type "text/html; charset=utf-8" --metadata-directive REPLACE
